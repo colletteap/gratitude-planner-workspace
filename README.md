@@ -6,3 +6,6 @@ Share how you are feeling and receive a positive affirmation and book or audio b
 
 ### interactive-calendar
 Navigate through days, weeks or months; click on specific days to add, delete or change tasks.
+
+### task-management
+Use a task list to add, edit or delete tasks.
