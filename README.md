@@ -9,3 +9,6 @@ Navigate through days, weeks or months; click on specific days to add, delete or
 
 ### task-management
 Use a task list to add, edit or delete tasks.
+
+### countdown
+Countdown until summer break.
