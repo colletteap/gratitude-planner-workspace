@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customized Planner</title>
+  <link rel="stylesheet" type="text/css" href="clickable-button-style.css" />
+</head>
+<body>
+    <p><strong>My</strong> Teacher Planner</p>
+    <script>
+        // JavaScript goes here
+        const para = document.querySelector("p");
+    
+    para.addEventListener("click", updateName);
+    
+    function updateName() {
+      const name = prompt("Enter a new name");
+      para.textContent = `${name} Teacher Planner`;
+    }
+      </script>
+</body>
+</html>
