@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customized Planner</title>
+  <link rel="stylesheet" type="text/css" href="clickable-button-style.css" />
+</head>
+
+<body>
+    <div id="heading">
+        <p><strong>My</strong> Teacher Planner</p>
+    </div>
+        <div id="button">
+          <button onclick="summerCountdown()">Summer Countdown</button>
+      </div>
+
+ 
+  
+  
+  <script>
+      // Summer Countdown
+      const button = document.querySelector("button");
+  
+      button.addEventListener("click", summerCountdown);
+  
+      function summerCountdown() {
+          // Set date countdown is to end
+          const eventDate = new Date("2023-06-23T15:00:00");
+  
+          // Get current date and time
+          const currentDate = new Date();
+  
+          // Calculate time difference in seconds
+          const timeDifference = Math.floor((eventDate - currentDate) / 1000);
+          if (timeDifference > 0) {
+              // Calculate days, hours, minutes, and seconds
+              let days = Math.floor(timeDifference / (60 * 60 * 24));
+              let hours = Math.floor((timeDifference % (60 * 60 * 24)) / (60 * 60));
+              let minutes = Math.floor((timeDifference % (60 * 60)) / 60);
+              let seconds = Math.floor(timeDifference % 60);
+  
+              // Display countdown
+              const countdownElement = document.getElementById("button");
+              countdownElement.textContent = `Summer starts in: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+  
+              // Update countdown every second
+              setTimeout(summerCountdown, 1000);
+          } else {
+              // If event has already occurred
+              const countdownElement = document.getElementById("button");
+              countdownElement.textContent = "Enjoy summer break!";
+          }
+      }
+  </script>
+
+        
+    <script>
+            //Customize Planner Name
+        const para = document.querySelector("p");
+    
+    para.addEventListener("click", updateName);
+    
+    function updateName() {
+      const name = prompt("Enter a new name");
+      para.textContent = `${name} Teacher Planner`;
+    }
+      </script>
+</body>
+</html>
