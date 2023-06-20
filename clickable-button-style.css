@@ -1,46 +1,59 @@
 p {
-    font-family: Now, Georgia, serif;
-    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+    font-size: 16px;
     letter-spacing: 1px;
     text-transform: capitalize;
-    text-align: center;
+    text-align: left;
+    vertical-align: bottom;
   }
 
+#box {
+  border: 25px solid #D09591;
+  color: rgb(255 255 255 / 1);
+  border-radius: 5px;
+  display: block;
+  cursor: crosshair;
+  border: 1px solid #859995; 
+  background-color: #fab69d; 
+  float: left;
+  width: 200px;
+  margin: 10px;
+  padding-left: 10px;
+  }
+
+
+  .text {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+
   button {
-    font-family: Now, Georgia, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
     background: #D09591;
     color: rgb(255 255 255 / 1);
     font-size: 18px;
+    border-radius: 5px;
     letter-spacing: 1px;
     text-transform: capitalize;
-    text-align: center;
-    float: right up;
-    margin-left: 600px;
-    margin-bottom: 400px;
+    text-align: right;
+    float: right;
+    width: 200px;
+    margin: 10px;
+    cursor: crosshair;
+    padding-top: 1px;
   }
 
   #heading {    
-    border: 2px solid #D09591;
+    border: 5px solid #D09591;
     background: #FEB4a1;
     color: rgb(255 255 255 / 1);
-    border-radius: 1px;
+    border-radius: 5px;
     padding: 1px 1px;
     display: block;
     cursor: crosshair;
 }
 
-  #button {
-    font-family: Georgia, serif;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    width: 45%;
-    padding-top: 1px;
-    float: right up;
-    text-align: right;
-    margin-left: 600px;
-    margin-bottom: 400px;
-}
 
 .right {
     float: right up;
