@@ -1,80 +1,102 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Customized Planner</title>
-  <link rel="stylesheet" type="text/css" href="clickable-button-style.css" />
+    <title>Customized Planner</title>
+    <link rel="stylesheet" type="text/css" href="clickable-button-style.css" />
 </head>
 
 <body>
+    <div id=" containera">
 
-    <div id="logo">
-         <a href="https://www.boredteachers.com/post/funny-comics-capture-teacher-life"><img src="images/Gratitude-Planner.jpg" alt="Gratitude Planner Logo"></a>
+        <div id="mygreatday" class="card">
+            <a href="https://www.boredteachers.com/post/funny-comics-capture-teacher-life">
+                <img id="planner-img" src="images/Gratitude-Planner.jpg" alt="Gratitude Planner Logo">
+            </a>
+            <p><strong>My</strong> Great Day</p>
+        </div>
+
+        <div id="button" class="card">
+            <p onclick="summerCountdown()"><strong>Summer Countdown</strong></p>
+        </div>
+
+        <div id="specialdays" class="card">
+            <p><strong>Special Days</strong></p>
+        </div>
+
+        <div id="journal" class="card">
+            <p><strong>Journal it out</strong></p>
+        </div>
     </div>
 
-    <div id="mygreatday">
-        <p><strong>My</strong> Great Day</p>
+    <div id="containerb">
+
+        <div id="calendar" class="card">
+            <p><strong>Monthly Calendar</strong></p>
+        </div>
+
+        <div id="to-do" class="card">
+            <p><strong>The To Do's</strong></p>
+        </div>
+
+        <div id="core-values" class="card">
+            <p><strong>Core Values</strong></p>
+        </div>
+
+        <div id="self-care" class="card">
+            <p><strong>Self-Care Resources</strong></p>
+        </div>
+
     </div>
 
-    <div id="button">
-        <button onclick="summerCountdown()"><strong>Summer Countdown</strong></button>
-    </div>
-
-    <div id="specialdays">
-        <p><strong>Special Days</strong></p>    
-    </div>
-  
-    <div id="journal">
-        <p><strong>Journal it out</strong></p>    
-    </div>
-
-  
-  <script>
-      // Summer Countdown
-      const button = document.querySelector("button");
-  
-      button.addEventListener("click", summerCountdown);
-  
-      function summerCountdown() {
-          // Set date countdown is to end
-          const eventDate = new Date("2023-06-23T15:00:00");
-  
-          // Get current date and time
-          const currentDate = new Date();
-  
-          // Calculate time difference in seconds
-          const timeDifference = Math.floor((eventDate - currentDate) / 1000);
-          if (timeDifference > 0) {
-              // Calculate days, hours, minutes, and seconds
-              let days = Math.floor(timeDifference / (60 * 60 * 24));
-              let hours = Math.floor((timeDifference % (60 * 60 * 24)) / (60 * 60));
-              let minutes = Math.floor((timeDifference % (60 * 60)) / 60);
-              let seconds = Math.floor(timeDifference % 60);
-  
-              // Display countdown
-              const countdownElement = document.getElementById("button");
-              countdownElement.textContent = `Summer starts in: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
-  
-              // Update countdown every second
-              setTimeout(summerCountdown, 1000);
-          } else {
-              // If event has already occurred
-              const countdownElement = document.getElementById("button");
-              countdownElement.textContent = "Enjoy summer break!";
-          }
-      }
-  </script>
-
-        
     <script>
-            //Customize Planner Name
+        // Summer Countdown
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", summerCountdown);
+
+        function summerCountdown() {
+            // Set date countdown is to end
+            const eventDate = new Date("2023-06-23T15:00:00");
+
+            // Get current date and time
+            const currentDate = new Date();
+
+            // Calculate time difference in seconds
+            const timeDifference = Math.floor((eventDate - currentDate) / 1000);
+            if (timeDifference > 0) {
+                // Calculate days, hours, minutes, and seconds
+                let days = Math.floor(timeDifference / (60 * 60 * 24));
+                let hours = Math.floor((timeDifference % (60 * 60 * 24)) / (60 * 60));
+                let minutes = Math.floor((timeDifference % (60 * 60)) / 60);
+                let seconds = Math.floor(timeDifference % 60);
+
+                // Display countdown
+                const countdownElement = document.getElementById("button");
+                countdownElement.textContent = `Summer starts in: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+
+                // Update countdown every second
+                setTimeout(summerCountdown, 1000);
+            } else {
+                // If event has already occurred
+                const countdownElement = document.getElementById("button");
+                countdownElement.textContent = "Enjoy summer break!";
+            }
+        }
+    </script>
+
+
+    <script>
+        //Customize Planner Name
         const para = document.querySelector("p");
-    
-    para.addEventListener("click", updateName);
-    
-    function updateName() {
-      const name = prompt("Enter a new name");
-      para.textContent = `${name} Teacher Planner`;
-    }
-      </script>
+
+        para.addEventListener("click", updateName);
+
+        function updateName() {
+            const name = prompt("Enter a new name");
+            para.textContent = `${name} Teacher Planner`;
+        }
+    </script>
 </body>
+
 </html>

@@ -1,95 +1,105 @@
-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    vertical-align: bottom;
-  }
-
-#mygreatday {
-  color: #000000;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
-  display: block;
-  cursor: crosshair;
-  background-color: #fab69d; 
-  float: left;
-  width: 200px;
-  margin-left: 200px;
-  margin-top: 100px;
-  padding-top: 40px;
-  padding-bottom: 35px;
-  }
-
-
-  #specialdays {
-    color: #000000;
-    font-size: 18px;
-    border-radius: 5px;
-    display: block;
-    cursor: crosshair;
-    background-color: #9f5f67; 
-    align: center;
-    width: 200px;
-    margin-left: 420px;
-    padding-top: 150px;
-    padding-bottom: 35px;
-    padding-left: 20px;
-    text-align: left;
-    }
-
-    #journal {
-      color: #000000;
-      font-size: 18px;
-      border-radius: 5px;
-      display: block;
-      cursor: crosshair;
-      background-color: #99a59a; 
-      align: center;
-      width: 200px;
-      margin-left: 660px;
-      padding-top: 150px;
-      padding-bottom: 35px;
-      padding-left: 20px;
-      text-align: left;
-      }
-
-    #logo {
-      width: 10px;
-      height: 10px;
-    }
-
-
-    img {
-      width: 50px;
-      height: 50px;
-      margin-top: 88px;
-      margin-left: 275px;
-      border-radius: 5px;
-    }
-
-
-  #button {
-    margin-top: 100px;
-    margin-left: 900px;
-  }
-
-  button {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
-    background: #82BDC3;
-    color: #000000;
-    font-size: 18px;
-    border-radius: 5px;
-    text-transform: capitalize;
-    text-align: left;
-    padding-top: 40px;
-    padding-bottom: 35px;
-    cursor: crosshair;
-  }
-
-
-
-.right {
-    float: right up;
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+  padding-top: 5rem;
 }
 
+#containera {
+  display: flex;
+  justify-content: space-between;
+}
+
+#containerb {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+p {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  vertical-align: bottom;
+}
+
+.card {
+  background: #D5B795;
+  color: #000000;
+  text-align: left;
+  text-transform: capitalize;
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  font-size: 18px;
+  cursor: crosshair;
+  border-radius: 5px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+
+#mygreatday {
+  text-align: center;
+  background-color: #fab69d;
+}
+
+
+#specialdays {
+  background-color: #9f5f67;
+  padding-top: 150px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#journal {
+  background-color: #99a59a;
+  padding-top: 150px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#planner-img {
+  width: 50px;
+  height: 50px;
+  margin-top: -2rem;
+  border-radius: 5px;
+}
+
+
+#button {
+  background: #82BDC3;
+  color: #000000;
+}
+
+#calendar {
+  background-color: #af6e34;
+  padding-top: 160px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#to-do {
+  background-color: #ebccbd;
+  padding-top: 150px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#core-values {
+  background-color: #9f5f67;
+  padding-top: 150px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#self-care {
+  background-color: #586959;
+  padding-top: 150px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  text-align: left;
+}
