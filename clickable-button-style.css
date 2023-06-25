@@ -3,15 +3,18 @@ body {
   padding-top: 5rem;
 }
 
-#containera {
+#container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 #containerb {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-content: space-around;
   justify-content: space-evenly;
   width: 200px;
 }
@@ -70,6 +73,7 @@ p {
 #button {
   background: #82BDC3;
   color: #000000;
+  padding-left: 10px;
 }
 
 #calendar {
