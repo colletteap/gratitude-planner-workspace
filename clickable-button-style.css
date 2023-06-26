@@ -5,105 +5,182 @@ body {
 
 #container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#container1 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-wrap;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
-#containerb {
+#container2 {
   display: flex;
-  flex-direction: row;
-  align-content: space-around;
-  justify-content: space-evenly;
-  width: 200px;
+  flex-direction: column;
+  flex-flow: column-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  row-gap: 20px;
 }
+
+#container3 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#container4 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+
+.container-grid {
+  display: grid;
+  grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [end];
+  grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr [row6] 1fr [end];
+  grid-template-areas:
+    "my-great-day special-day journal summer-countdown"
+    ". . . ."
+    "calendar . . self-care"
+    ". to-do core-value ."
+    ". . . substitute"
+    ". . . .";
+}
+
+.item-a {
+  grid-area: my-great-day;
+}
+
+.item-b {
+  grid-area: special-days;
+}
+
+.item-c {
+  grid-area: journal;
+}
+
+.item-d {
+  grid-area: summer-countdown;
+}
+
+.item-e {
+  grid-area: calendar;
+}
+
+.item-f {
+  grid-area: to-do;
+}
+
+.item g {
+  grid-area: core-value;
+}
+
+.item h {
+  grid-area: self-care;
+}
+
+.item i {
+  grid-area: substitute;
+}
+
 
 p {
-  letter-spacing: 1px;
   text-transform: capitalize;
-  vertical-align: bottom;
 }
 
 .card {
   background: #D5B795;
   color: #000000;
   text-align: left;
+  text-align: bottom;
   text-transform: capitalize;
   width: 200px;
-  height: 200px;
+  height: 100px;
   min-width: 200px;
   font-size: 18px;
   cursor: crosshair;
   border-radius: 5px;
-  padding-top: 40px;
-  padding-bottom: 35px;
+  padding-left: 10px;
 }
 
 #mygreatday {
-  text-align: center;
   background-color: #fab69d;
+  height: 100px;
 }
 
 
 #specialdays {
   background-color: #9f5f67;
-  padding-top: 150px;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  text-align: left;
+  height: 200px;
 }
 
 #journal {
   background-color: #99a59a;
-  padding-top: 150px;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  text-align: left;
+  height: 200px;
 }
 
-#planner-img {
-  width: 50px;
-  height: 50px;
+#plus-img {
+  width: 50%;
+  height: 50%;
   margin-top: -2rem;
-  border-radius: 5px;
 }
 
+#arrow-img {
+  width: 25px;
+  height: 25px;
+}
+
+#plus {
+  font-size: 25px;
+  text-align: right;
+  margin-right: 20px;
+}
 
 #button {
   background: #82BDC3;
   color: #000000;
   padding-left: 10px;
+  height: 128px;
 }
 
 #calendar {
   background-color: #af6e34;
-  padding-top: 160px;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  text-align: left;
+  height: 300px;
 }
 
 #to-do {
   background-color: #ebccbd;
-  padding-top: 150px;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  text-align: left;
+  height: 200px;
 }
 
 #core-values {
   background-color: #9f5f67;
-  padding-top: 150px;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  text-align: left;
+  height: 200px;
 }
 
 #self-care {
   background-color: #586959;
-  padding-top: 150px;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  text-align: left;
+  height: 128px;
+}
+
+#substitute {
+  background-color: #fab69d;
+  height: 128px;
 }

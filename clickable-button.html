@@ -8,47 +8,74 @@
 
 <body>
     <div id="container">
+        <div id="container1">
 
-        <div id="mygreatday" class="card">
-            <a href="https://www.boredteachers.com/post/funny-comics-capture-teacher-life">
-                <img id="planner-img" src="images/Gratitude-Planner.jpg" alt="Gratitude Planner Logo">
-            </a>
-            <p><strong>My</strong> Great Day</p>
+            <div id="mygreatday" class="card">
+                <p><strong>My</strong> Great Day</p>
+            </div>
+
+            <div id="calendar" class="card">
+                <p>Monthly Calendar</p>
+                <div id="arrow-img">
+                    <img src="images/arrow.png" alt="arrow">
+                </div>
+            </div>
         </div>
 
-        <div id="button" class="card">
-            <p onclick="summerCountdown()"><strong>Summer Countdown</strong></p>
+        <div id="container2">
+            <div id="specialdays" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Special Days</p>
+            </div>
+            <div id="to-do" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>The To Do's</p>
+            </div>
         </div>
 
-        <div id="specialdays" class="card">
-            <p><strong>Special Days</strong></p>
+        <div id="container3">
+            <div id="journal" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Journal it out</p>
+            </div>
+            <div id="core-values" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Core Values</p>
+            </div>
         </div>
 
-        <div id="journal" class="card">
-            <p><strong>Journal it out</strong></p>
+        <div id="container4">
+            <div id="button" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p onclick="summerCountdown()">Summer Countdown</p>
+            </div>
+
+            <div id="self-care" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Self-Care Resources</p>
+            </div>
+
+            <div id="substitute" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Substitute Teacher Customized Plan</p>
+            </div>
+
         </div>
     </div>
-
-    <div id="containerb">
-
-        <div id="calendar" class="card">
-            <p><strong>Monthly Calendar</strong></p>
-        </div>
-
-        <div id="to-do" class="card">
-            <p><strong>The To Do's</strong></p>
-        </div>
-
-        <div id="core-values" class="card">
-            <p><strong>Core Values</strong></p>
-        </div>
-
-        <div id="self-care" class="card">
-            <p><strong>Self-Care Resources</strong></p>
-        </div>
-
-    </div>
-
     <script>
         // Summer Countdown
         const button = document.querySelector("button");
