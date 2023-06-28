@@ -11,7 +11,10 @@ function selectJournalPrompt() {
     return prompts[randomIndex];
 }
 
-// Example usage
+function displayJournalPrompt() {
+    var statementElement = document.getElementById("prompts");
+    statementElement.textContent = selectJournalPrompt();
+}
 document.addEventListener("click", function() {
     var clickedPrompt = selectJournalPrompt();
     console.log(clickedPrompt);
