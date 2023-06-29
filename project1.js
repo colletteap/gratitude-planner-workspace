@@ -60,15 +60,14 @@ function displayJournalPrompt() {
     var statementElement = document.getElementById("prompts");
     statementElement.textContent = selectJournalPrompt();
 }
-document.addEventListener("click", displayJournalPrompt
-    })
+// document.addEventListener("click", displayJournalPrompt);
 
 //Hide/Show Div
-const para = document.querySelector("#journal")
+const para2 = document.querySelector("#journal")
 
-para.addEventListener("click", showDiv);
+para2.addEventListener("click", showDiv);
 
 function showDiv() {
     var div = document.getElementById('myJournal');
-    div.style.display = 'block';
+    div.style.display = 'flex';
 }
