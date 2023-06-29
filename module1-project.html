@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customized Planner</title>
+    <link rel="stylesheet" type="text/css" href="module1-project.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="container1">
+
+            <div id="mygreatday" class="card">
+                <p><strong>My</strong> Great Day</p>
+            </div>
+
+            <div id="calendar" class="card">
+                <div id="arrow-img">
+                    <img src="images/arrow.png" alt="arrow">
+                </div>
+                <p>Monthly Calendar</p>
+            </div>
+        </div>
+
+        <div id="container2">
+            <div id="specialdays" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Special Days</p>
+            </div>
+            <div id="to-do" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>The To Do's</p>
+            </div>
+        </div>
+
+        <div id="container3">
+            <div id="journal" class="card" onclick="showDiv()">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Journal it out</p>
+            </div>
+            <div id="core-values" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Core Values</p>
+            </div>
+        </div>
+
+        <div id="container4">
+            <div id="button" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p onclick="summerCountdown()">Summer Countdown</p>
+            </div>
+
+            <div id="self-care" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Self-Care Resources</p>
+            </div>
+
+            <div id="substitute" class="card">
+                <div id="plus">
+                    <p><strong>+</strong></p>
+                </div>
+                <p>Substitute Teacher Customized Plan</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="myJournal" class="hidden-div">
+        <div id="padding-journal">
+            <div id="journal-heading">
+                <strong>Journal it Out</strong>
+            </div>
+            <div id="journal1">
+                <div id="prompts" onclick="displayJournalPrompt()">
+                    Prompts
+                </div>
+                <input type="text" placeholder="Your thoughts.." class="input">
+            </div>
+        </div>
+    </div>
+
+    <script src="project1.js"></script>
+
+</body>
