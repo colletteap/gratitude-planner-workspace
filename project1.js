@@ -1,3 +1,19 @@
+// Randomly generated affirmations
+const phrases = [
+    "I know how to bring direction and order into my life",
+    "I choose to be kind to all, including myself",
+    "I create an environment that supports my well-being",
+    "I love myself first so that I may love others",
+    "I am loved"
+  ];
+
+  const randomIndex = Math.floor(Math.random() * phrases.length);
+
+  const randomPhrase = phrases[randomIndex];
+
+  const phraseElement = document.getElementById("randomPhrase"); 
+  phraseElement.textContent = randomPhrase;
+
 // Summer Countdown
 const button = document.querySelector("button");
 
@@ -60,7 +76,7 @@ function displayJournalPrompt() {
     var statementElement = document.getElementById("prompts");
     statementElement.textContent = selectJournalPrompt();
 }
-// document.addEventListener("click", displayJournalPrompt);
+// document.addEventListener("click", displayJournalPrompt)
 
 //Hide/Show Div
 const para2 = document.querySelector("#journal")
