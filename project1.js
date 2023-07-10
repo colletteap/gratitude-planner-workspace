@@ -54,7 +54,7 @@ const para = document.querySelector("p");
 para.addEventListener("click", updateName);
 
 function updateName() {
-    const name = prompt("Enter a new name");
+    const name = prompt("Enter your name");
     para.textContent = `${name} Teacher Planner`;
 }
 
@@ -87,3 +87,29 @@ function showDiv() {
     var div = document.getElementById('myJournal');
     div.style.display = 'flex';
 }
+
+//Save Button
+
+  document.getElementsByClassName('saveButton').addEventListener('click', saveDataToCookies);
+
+  function saveDataToCookies() {
+
+    const inputData = document.getElementsByClassName(input).value;
+
+    document.cookie = "savedData=" + data + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    alert("Data saved to cookies!");
+  }
+
+  function getSavedDataFromCookies() {
+    const name = "savedData=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+
+    for (const i = 0; i < cookieArray.length; i++) {
+      const cookie = cookieArray[i].trim();
+      if (cookie.indexOf(name) === 0) {
+        return cookie.substring(name.length, cookie.length);
+      }
+    }
+    return null;
+  }

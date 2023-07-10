@@ -31,6 +31,18 @@ body {
 	color: #686868;
   }
 
+  #saveButton {
+    align-self: right;
+    margin-right: 5px;
+    padding-right: 5px;
+  }
+
+  .saveButton {
+    border-radius: 5px;
+    border-width: 1px;
+    color:#586959;
+    border: solid #000000;
+  }
 
   #container1 {
     display: flex;
