@@ -5,14 +5,14 @@ const phrases = [
     "I create an environment that supports my well-being",
     "I love myself first so that I may love others",
     "I am loved"
-  ];
+];
 
-  const randomIndex = Math.floor(Math.random() * phrases.length);
+const randomIndex = Math.floor(Math.random() * phrases.length);
 
-  const randomPhrase = phrases[randomIndex];
+const randomPhrase = phrases[randomIndex];
 
-  const phraseElement = document.getElementById("randomPhrase"); 
-  phraseElement.textContent = randomPhrase;
+const phraseElement = document.getElementById("randomPhrase");
+phraseElement.textContent = randomPhrase;
 
 // Summer Countdown
 const button = document.querySelector("button");
@@ -92,22 +92,16 @@ function showDiv() {
 
 const dataInput = document.getElementById("input");
 const saveButton = document.getElementById("saveButton");
+dataInput = localStorage.getItem("savedData")
 
 // Add click event listener to the save button
-saveButton.addEventListener("click", function() {
+saveButton.addEventListener("click", function () {
 
     const data = dataInput.value;
 
-    // Check if the browser supports local storage
+    localStorage.setItem("savedData", data);
+    console.log(localStorage.getItem("savedData"));
 
-    if (typeof(Storage) !== "undefined") {       
-
-        localStorage.setItem("savedData", data);
-        alert("Thanks for sharing!");
-        console.log("Data saved to local storage.");
-    } else {
-        console.log("Sorry, your browser does not support local storage.");
-    }
 
     // Retrieve note
     function searchLocalStorage() {
@@ -125,7 +119,7 @@ saveButton.addEventListener("click", function() {
 });
 
 
-    
 
-    
-  
+
+
+
