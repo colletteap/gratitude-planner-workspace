@@ -35,14 +35,12 @@ body {
     align-self: right;
     margin-right: 5px;
     padding-right: 5px;
-  }
-
-  .saveButton {
     border-radius: 5px;
     border-width: 1px;
     color:#586959;
     border: solid #000000;
   }
+
 
   #container1 {
     display: flex;
@@ -226,7 +224,7 @@ body {
     cursor: crosshair; 
 }
 
-.input {
+#input {
     width: 90%;
     border: 2px solid #aaa;
     border-radius: 2px;

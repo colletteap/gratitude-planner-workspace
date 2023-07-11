@@ -90,26 +90,31 @@ function showDiv() {
 
 //Save Button
 
-  document.getElementsByClassName('saveButton').addEventListener('click', saveDataToCookies);
+const dataInput = document.getElementById("input");
+const saveButton = document.getElementById("saveButton");
 
-  function saveDataToCookies() {
+// Add click event listener to the save button
+saveButton.addEventListener("click", function() {
+    // Get the data from the input element
+    const data = dataInput.value;
 
-    const inputData = document.getElementsByClassName(input).value;
-
-    document.cookie = "savedData=" + data + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-    alert("Data saved to cookies!");
-  }
-
-  function getSavedDataFromCookies() {
-    const name = "savedData=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
-
-    for (const i = 0; i < cookieArray.length; i++) {
-      const cookie = cookieArray[i].trim();
-      if (cookie.indexOf(name) === 0) {
-        return cookie.substring(name.length, cookie.length);
-      }
+    // Check if the browser supports local storage
+    if (typeof(Storage) !== "undefined") {
+        // Save the data to local storage with a key of "savedData"
+        localStorage.setItem("savedData", data);
+        alert("Thanks for sharing!");
+        console.log("Data saved to local storage.");
+    } else {
+        console.log("Sorry, your browser does not support local storage.");
     }
-    return null;
-  }
+
+    //Retrieve note
+const retrievedNote = localStorage.getItem("savedData");
+console.log(retrievedNote);
+
+});
+
+    
+
+    
+  
