@@ -95,12 +95,17 @@ const saveButton = document.getElementById("saveButton");
 
 // Add click event listener to the save button
 saveButton.addEventListener("click", function() {
+
     // Get the data from the input element
+
     const data = dataInput.value;
 
     // Check if the browser supports local storage
+
     if (typeof(Storage) !== "undefined") {
+
         // Save the data to local storage with a key of "savedData"
+
         localStorage.setItem("savedData", data);
         alert("Thanks for sharing!");
         console.log("Data saved to local storage.");
@@ -108,11 +113,22 @@ saveButton.addEventListener("click", function() {
         console.log("Sorry, your browser does not support local storage.");
     }
 
-    //Retrieve note
-const retrievedNote = localStorage.getItem("savedData");
-console.log(retrievedNote);
+    // Retrieve note
+    function searchLocalStorage() {
+        if (typeof localStorage.getItem("savedData") === 'string') {
+            const storedValue = localStorage.getItem("savedData");
+            if (storedValue !== null) {
+                return storedValue;
+            }
+        }
+        return null;
+    }
 
+    // Call the searchLocalStorage function to retrieve the saved data
+    const retrievedData = searchLocalStorage();
+    console.log("Retrieved data:", retrievedData);
 });
+
 
     
 
