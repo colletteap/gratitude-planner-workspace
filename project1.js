@@ -88,11 +88,6 @@ const para2 = document.querySelector("#journal")
 para2.addEventListener("click", showDiv);
 
 
-//Hide/Show Div
-const para2 = document.querySelector("#journal")
-para2.addEventListener("click", showDiv);
-
-
 //Saving to Local Storage
 
 const dataInput = document.getElementById("input");
@@ -131,4 +126,4 @@ function saveData() {
     // you're essentially doing the same thing above with the direct 'getItem' call so the function is unnecessary
     // const retrievedData = searchLocalStorage();
     // console.log("Retrieved data:", retrieveFromLocalStorage('savedData'));
-});
+}};
