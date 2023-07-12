@@ -22,7 +22,8 @@ h2 {
 
 .cardContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
 }
@@ -83,9 +84,16 @@ textarea {
 }
 
 #cvButton {
-    background: #82BDC3;
+    background:#aaa;
     color: #000000;
-    padding: 50px;
-    height: 20px;
+    padding: 5px;
+    height: 30px;
+    align-self: center;
+    border-radius: 5px;
+    border-color: #9f5f67;
+  }
+
+  .cvbuttondiv {
+    align-self: center;
   }
 
