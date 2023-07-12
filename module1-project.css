@@ -206,7 +206,8 @@ body {
 
 #journal1 {
     background-color: #FFF;
-    margin: 20px 20px 20px 20px;
+    /* this is the same as `20px 20px 20px 20px`  */
+    margin: 20px;
     text-align: center;
     color: black;
     border: none;
@@ -221,14 +222,15 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
     line-height: 6px;
-    cursor: crosshair; 
+    /* crosshair is not the most common mouse cursor - pointer is much more recognized as something clickable */
+    cursor: pointer; 
 }
 
 #input {
     width: 90%;
+    min-height: 10rem;
     border: 2px solid #aaa;
     border-radius: 2px;
-    padding-bottom: 350px;
 }
 
 #myJournal {
