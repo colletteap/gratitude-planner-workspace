@@ -26,7 +26,7 @@ h2 {
     justify-content: center;
     gap: 5px;
 }
-.card {
+.cvcard {
     height: 30px;
     width: 250px;
     border: #9f5f67;
@@ -63,7 +63,7 @@ h2 {
     column-gap: 20px; /* Optional - adjust the gap between columns */
   }
 
-.link {
+.cvlink {
     text-align: center;
     font-size: 13px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -71,7 +71,7 @@ h2 {
     color: #aaa;
   }
 
-.input {
+.cvinput {
     width: 90%;
     border: 2px solid #aaa;
     border-radius: 2px;
@@ -81,4 +81,11 @@ h2 {
 textarea {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+#cvButton {
+    background: #82BDC3;
+    color: #000000;
+    padding: 50px;
+    height: 20px;
+  }
 
