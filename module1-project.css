@@ -143,19 +143,19 @@ body {
     font-size: 25px;
     text-align: right;
     margin-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   
   #button {
     background: #82BDC3;
     color: #000000;
     padding-left: 10px;
-    height: 128px;
+    height: 88px;
   }
   
   #calendar {
     background-color: #af6e34;
-    height: 300px;
+    height: 340px;
   }
   
   #to-do {
@@ -170,7 +170,7 @@ body {
   
   #self-care {
     background-color: #586959;
-    height: 153px;
+    height: 193px;
   }
   
   #substitute {
