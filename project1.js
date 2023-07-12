@@ -88,35 +88,35 @@ function showDiv() {
     div.style.display = 'flex';
 }
 
-//Save Button
+//Saving to Local Storage
 
 const dataInput = document.getElementById("input");
-const saveButton = document.getElementById("saveButton");
-dataInput = localStorage.getItem("savedData")
+const savedText = document.getElementById("savedText");
 
-// Add click event listener to the save button
-saveButton.addEventListener("click", function () {
-
+// Function to save input data to local storage
+function saveData() {
+    // Get the input value
     const data = dataInput.value;
 
-    localStorage.setItem("savedData", data);
-    console.log(localStorage.getItem("savedData"));
+    // Save the data to local storage
+    localStorage.setItem('savedData', data);
 
+    // Function to retrieve and display data from local storage
+    function retrieveData() {
+        // Retrieve the data from local storage
+        const inputData = localStorage.getItem('savedData');
 
-    // Retrieve note
-    function searchLocalStorage() {
-        if (typeof localStorage.getItem("savedData") === 'string') {
-            const storedValue = localStorage.getItem("savedData");
-            if (storedValue !== null) {
-                return storedValue;
-            }
+        // Check if data exists
+        if (inputData) {
+            // Display the retrieved data in the input field
+            document.getElementById('input').value = inputData;
         }
-        return null;
     }
 
-    const retrievedData = searchLocalStorage();
-    console.log("Retrieved data:", retrievedData);
-});
+    // Call the retrieveData() function when the page loads
+    window.onload = retrieveData;
+}
+
 
 
 
