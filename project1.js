@@ -78,20 +78,29 @@ function displayJournalPrompt() {
 }
 // document.addEventListener("click", displayJournalPrompt)
 
-//Hide/Show Div
-const para2 = document.querySelector("#journal")
-
-para2.addEventListener("click", showDiv);
-
 function showDiv() {
     var div = document.getElementById('myJournal');
     div.style.display = 'flex';
 }
 
+//Hide/Show Div
+const para2 = document.querySelector("#journal")
+para2.addEventListener("click", showDiv);
+
+
+//Hide/Show Div
+const para2 = document.querySelector("#journal")
+para2.addEventListener("click", showDiv);
+
+
 //Saving to Local Storage
 
 const dataInput = document.getElementById("input");
-const savedText = document.getElementById("savedText");
+const saveButton = document.getElementById("saveButton");
+// this is all I had to change to make things work 
+// there was an error about re-assigning a const (needed to assign the data to the `value` property of the text input)
+// once part of the script has an error the remaining code stops executing so that's likely why your changes weren't having any affect
+dataInput.value = localStorage.getItem("savedData");
 
 // Function to save input data to local storage
 function saveData() {
@@ -106,20 +115,20 @@ function saveData() {
         // Retrieve the data from local storage
         const inputData = localStorage.getItem('savedData');
 
-        // Check if data exists
-        if (inputData) {
-            // Display the retrieved data in the input field
-            document.getElementById('input').value = inputData;
-        }
-    }
+    // This function is inside the event listener so is only really useful here but it could be handy globally
+    // also, the check for null isn't really needed since you still return null in the default case
+    // Retrieve note
+    // function searchLocalStorage() {
+    //     if (typeof localStorage.getItem("savedData") === 'string') {
+    //         const storedValue = localStorage.getItem("savedData");
+    //         if (storedValue !== null) {
+    //             return storedValue;
+    //         }
+    //     }
+    //     return null;
+    // }
 
-    // Call the retrieveData() function when the page loads
-    window.onload = retrieveData;
-}
-
-
-
-
-
-
-
+    // you're essentially doing the same thing above with the direct 'getItem' call so the function is unnecessary
+    // const retrievedData = searchLocalStorage();
+    // console.log("Retrieved data:", retrieveFromLocalStorage('savedData'));
+});
