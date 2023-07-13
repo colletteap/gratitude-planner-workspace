@@ -1,19 +1,14 @@
 // Save to Local Storage
-const cvdataInput = document.getElementById("cvinput");
+const cvdataInput1 = document.getElementById("cvinput1");
 const cvsaveButton = document.getElementById("cvButton");
 
-cvdataInput.value = localStorage.getItem("savedcvData");
+cvdataInput1.value = localStorage.getItem("cvinput1");
+cvsaveButton.addEventListener("click", savecvData);
 
 // Function to save input data to local storage
 function savecvData() {
-    // Get the input value
-    const cvdata = cvdataInput.value;
-
+    
     // Save the data to local storage
-    localStorage.setItem('savedcvData', cvdata);
-
-    // Function to retrieve and display data from local storage
-    function retrievecvData() {
-        // Retrieve the data from local storage
-        const inputData = localStorage.getItem('savedcvData');
-    }};
+    localStorage.setItem('cvinput1', cvdataInput1.value);
+    
+}

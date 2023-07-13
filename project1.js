@@ -96,6 +96,7 @@ const saveButton = document.getElementById("saveButton");
 // there was an error about re-assigning a const (needed to assign the data to the `value` property of the text input)
 // once part of the script has an error the remaining code stops executing so that's likely why your changes weren't having any affect
 dataInput.value = localStorage.getItem("savedData");
+saveButton.addEventListener("click", saveData);
 
 // Function to save input data to local storage
 function saveData() {
@@ -104,26 +105,4 @@ function saveData() {
 
     // Save the data to local storage
     localStorage.setItem('savedData', data);
-
-    // Function to retrieve and display data from local storage
-    function retrieveData() {
-        // Retrieve the data from local storage
-        const inputData = localStorage.getItem('savedData');
-
-    // This function is inside the event listener so is only really useful here but it could be handy globally
-    // also, the check for null isn't really needed since you still return null in the default case
-    // Retrieve note
-    // function searchLocalStorage() {
-    //     if (typeof localStorage.getItem("savedData") === 'string') {
-    //         const storedValue = localStorage.getItem("savedData");
-    //         if (storedValue !== null) {
-    //             return storedValue;
-    //         }
-    //     }
-    //     return null;
-    // }
-
-    // you're essentially doing the same thing above with the direct 'getItem' call so the function is unnecessary
-    // const retrievedData = searchLocalStorage();
-    // console.log("Retrieved data:", retrieveFromLocalStorage('savedData'));
-}};
+}
