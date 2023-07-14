@@ -1,7 +1,7 @@
 // List
 document.addEventListener('DOMContentLoaded', function() {
-    const wordBank = document.getElementsByClassName('word');
-    const selectedWords = document.getElementsByClassName('selected-words');
+    const wordBank = document.querySelectorAll('.word');
+    const selectedWords = document.querySelector('.selected-words');
     let order = 1;
     let wordCount = 0;
   
@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedWords.appendChild(selectedWord);
         order++;
         wordCount++;
+
+        // Remove selected words to add new
+        selectedWord.addEventListener('click', function() {
+            selectedWords.removeChild(selectedWord);
+            wordCount--;
+          });
       }
       });
     });
