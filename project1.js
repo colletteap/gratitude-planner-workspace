@@ -78,14 +78,15 @@ function displayJournalPrompt() {
 }
 // document.addEventListener("click", displayJournalPrompt)
 
+//Hide/Show Div
 function showDiv() {
     var div = document.getElementById('myJournal');
     div.style.display = 'flex';
+    div.scrollIntoView({ behavior: "smooth" });
 }
 
-//Hide/Show Div
 const para2 = document.querySelector("#journal")
-para2.addEventListener("click", showDiv);
+    para2.addEventListener("click", showDiv);
 
 
 //Saving to Local Storage
