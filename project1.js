@@ -78,7 +78,7 @@ function displayJournalPrompt() {
 }
 // document.addEventListener("click", displayJournalPrompt)
 
-//Hide/Show Div
+//Hide/Show Journal Div
 function showDiv() {
     var div = document.getElementById('myJournal');
     div.style.display = 'flex';
@@ -107,3 +107,41 @@ function saveData() {
     // Save the data to local storage
     localStorage.setItem('savedData', data);
 }
+
+//Hide/Show Core Values Div
+function showDiv() {
+    var cvdiv = document.getElementById('mycorevalues');
+    cvdiv.style.display = 'flex';
+    cvdiv.scrollIntoView({ behavior: "smooth" });
+}
+
+const para3 = document.querySelector("#core-values")
+    para3.addEventListener("click", showDiv);
+
+// List
+document.addEventListener('DOMContentLoaded', function() {
+    const wordBank = document.querySelectorAll('.word');
+    const selectedWords = document.querySelector('.selected-words');
+    let order = 1;
+    let wordCount = 0;
+  
+    wordBank.forEach(function(word) {
+      word.addEventListener('click', function() {
+        if (wordCount < 6) {
+        const selectedWord = document.createElement('div');
+        selectedWord.textContent = word.textContent;
+        selectedWord.classList.add('word');
+        selectedWord.style.order = order;
+        selectedWords.appendChild(selectedWord);
+        order++;
+        wordCount++;
+
+        // Remove selected words to add new
+        selectedWord.addEventListener('click', function() {
+            selectedWords.removeChild(selectedWord);
+            wordCount--;
+          });
+      }
+      });
+    });
+  }); 
