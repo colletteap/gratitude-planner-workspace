@@ -1,4 +1,4 @@
-body {
+#mycorevalues {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -6,14 +6,14 @@ body {
     padding-top: 3rem;
 }
 
-h1 {
+#h1cv {
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
     color:#FFF
 }
 
-h2 {
+#h2cv {
     text-align: center;
     letter-spacing: 2px;
     padding-left: 20px;
