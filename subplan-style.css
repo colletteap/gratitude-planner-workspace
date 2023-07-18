@@ -6,11 +6,11 @@ padding-top: 2rem;
 
 h1 {
 text-align: center;
-color: #fff
+color:black
 }
 
 p {
-color: #fff
+color:black
 }
 
 #containerInfo {
@@ -23,8 +23,9 @@ color: #fff
 #teacherName {
     background-color: #fff;
     height: 25px;
-    width: 140px;
+    width: 280px;
     border-radius: 3px;
+    border: solid;
 }
 
 #gradeLevel {
@@ -32,6 +33,7 @@ color: #fff
     height: 25px;
     width: 140px;
     border-radius: 3px;
+    border: solid;
 }
 
 #roomNum {
@@ -39,6 +41,7 @@ color: #fff
     height: 25px;
     width: 140px;
     border-radius: 3px;
+    border: solid;
 }
 
 #containerContacts {
@@ -54,6 +57,7 @@ color: #fff
     height: 100px;
     width: 300px;
     border-radius: 3px;
+    border: solid;
 }
 
 #helpfulContacts {
@@ -61,6 +65,7 @@ color: #fff
     height: 100px;
     width: 300px;
     border-radius: 3px;
+    border: solid;
 }
 
 #classSchedule {
