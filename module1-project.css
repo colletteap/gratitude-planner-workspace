@@ -1,245 +1,245 @@
 body {
-    font-family: lora, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
-    padding-top: 2rem;
-  }
-  
-  #container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
+  font-family: lora, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+  padding-top: 2rem;
+}
 
-  #randomPhrase {
-    font-size: 1.5em;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	text-align: center;
-	font-weight: 100;
-  color:#586959
-  }
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
-  #randomPhrase::before {
-    content: '-';
-	margin-right: 0.6em;
-	color: #686868;
-  }
+#randomPhrase {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: 100;
+  color: #586959
+}
 
-  #randomPhrase::after {
-    content: '-';
-	margin-left: 0.6em;
-	color: #686868;
-  }
+#randomPhrase::before {
+  content: '-';
+  margin-right: 0.6em;
+  color: #686868;
+}
 
-  #savedText {
-    height: 40px;
-    margin-right: 5px;
-    padding-right: 5px;
-    border-radius: 5px;
-    border-width: 1px;
-    color:#586959;
-    border: solid #000000;
-  }
+#randomPhrase::after {
+  content: '-';
+  margin-left: 0.6em;
+  color: #686868;
+}
+
+#savedText {
+  height: 40px;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  border-width: 1px;
+  color: #586959;
+  border: solid #000000;
+}
 
 
-  #container1 {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column-wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-  
-  #container2 {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column-wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-  
-  #container3 {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column-wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-  
-  #container4 {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column-wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
- 
-  
-  p {
-    text-transform: capitalize;
-  }
-  
-  .card {
-    display: flex;
-    background: #D5B795;
-    color: #000000;
-    text-align: left;
-    align-items: flex-end;
-    text-transform: capitalize;
-    width: 250px;
-    height: 100px;
-    min-width: 200px;
-    font-size: 18px;
-    cursor: crosshair;
-    border-radius: 5px;
-    padding-left: 10px;
-  }
-  
-  #mygreatday {
-    background-color: #fab69d;
-    height: 110px;
-  }
-  
-  
-  #specialdays {
-    background-color: #9f5f67;
-    height: 225px;
-  }
-  
-  #journal {
-    background-color: #99a59a;
-    height: 225px;
-  }
-  
-  #plus-img {
-    width: 50%;
-    height: 50%;
-    margin-top: -2rem;
-  }
-  
-  #arrow-img {
-    width: 25px;
-    height: 25px;
-    margin-left: 50px;
-    margin-bottom: 160px;
-  }
-  
-  #plus {
-    font-size: 25px;
-    text-align: right;
-    margin-left: 100px;
-    margin-bottom: 130px;
-  }
+#container1 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  row-gap: 20px;
+}
 
-  #plus1 {
-    font-size: 25px;
-    text-align: right;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
-  
-  #button {
-    background: #82BDC3;
-    color: #000000;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    height: 80px;
-  }
-  
-  #calendar {
-    background-color: #af6e34;
-    height: 340px;
-  }
-  
-  #to-do {
-    background-color: #ebccbd;
-    height: 225px;
-  }
-  
-  #core-values {
-    background-color: #9f5f67;
-    height: 225px;
-  }
-  
-  #self-care {
-    background-color: #586959;
-    height: 193px;
-  }
-  
-  #substitute {
-    background-color: #fab69d;
-    height: 153px;
-  }
+#container2 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#container3 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#container4 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+
+p {
+  text-transform: capitalize;
+}
+
+.card {
+  display: flex;
+  background: #D5B795;
+  color: #000000;
+  text-align: left;
+  align-items: flex-end;
+  text-transform: capitalize;
+  width: 250px;
+  height: 100px;
+  min-width: 200px;
+  font-size: 18px;
+  cursor: crosshair;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+#mygreatday {
+  background-color: #fab69d;
+  height: 110px;
+}
+
+
+#specialdays {
+  background-color: #9f5f67;
+  height: 225px;
+}
+
+#journal {
+  background-color: #99a59a;
+  height: 225px;
+}
+
+#plus-img {
+  width: 50%;
+  height: 50%;
+  margin-top: -2rem;
+}
+
+#arrow-img {
+  width: 25px;
+  height: 25px;
+  margin-left: 50px;
+  margin-bottom: 160px;
+}
+
+#plus {
+  font-size: 25px;
+  text-align: right;
+  margin-left: 100px;
+  margin-bottom: 130px;
+}
+
+#plus1 {
+  font-size: 25px;
+  text-align: right;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+#button {
+  background: #82BDC3;
+  color: #000000;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  height: 80px;
+}
+
+#calendar {
+  background-color: #af6e34;
+  height: 340px;
+}
+
+#to-do {
+  background-color: #ebccbd;
+  height: 225px;
+}
+
+#core-values {
+  background-color: #9f5f67;
+  height: 225px;
+}
+
+#self-care {
+  background-color: #586959;
+  height: 193px;
+}
+
+#substitute {
+  background-color: #fab69d;
+  height: 153px;
+}
 
 
 #journal-body {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
-    padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+  padding-top: 3rem;
 }
 
 #journal-heading {
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-top: 15px;
-    font-size: 22px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-top: 15px;
+  font-size: 22px;
 }
 
 #padding-journal {
-    background-color: #99a59a;
-    border: none;
-    width: 800px;
-    border-radius: 5px;
-    padding-bottom: 10px;
+  background-color: #99a59a;
+  border: none;
+  width: 800px;
+  border-radius: 5px;
+  padding-bottom: 10px;
 }
 
 #journal1 {
-    background-color: #FFF;
-    margin: 20px 20px 20px 20px;
-    text-align: center;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding-bottom: 20px;
+  background-color: #FFF;
+  margin: 20px 20px 20px 20px;
+  text-align: center;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding-bottom: 20px;
 }
 
 #prompts {
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    line-height: 6px;
-    cursor: crosshair; 
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 6px;
+  cursor: crosshair;
 }
 
 #input {
-    width: 90%;
-    border: 2px solid #aaa;
-    border-radius: 2px;
-    padding-bottom: 350px;
+  width: 90%;
+  border: 2px solid #aaa;
+  border-radius: 2px;
+  padding-bottom: 350px;
 }
 
 #myJournal {
-    justify-content: center;
-    align-content: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
-    padding-top: 3rem;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+  padding-top: 3rem;
 }
 
 .hidden-div {
-    display: none;
+  display: none;
 }
 
 .hidden-cvdiv {
@@ -257,14 +257,14 @@ body {
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color:#FFF
+  color: #FFF
 }
 
 #h2cv {
   text-align: center;
   letter-spacing: 2px;
   padding-left: 20px;
-  color:#FFF
+  color: #FFF
 }
 
 .cardContainer {
@@ -274,6 +274,7 @@ body {
   justify-content: center;
   gap: 5px;
 }
+
 .cvcard {
   height: 30px;
   width: 250px;
@@ -308,7 +309,8 @@ body {
 
 .column-wrapper {
   column-count: 3;
-  column-gap: 20px; /* Optional - adjust the gap between columns */
+  column-gap: 20px;
+  /* Optional - adjust the gap between columns */
 }
 
 .cvlink {
@@ -331,7 +333,7 @@ textarea {
 }
 
 #cvButton {
-  background:#aaa;
+  background: #aaa;
   color: #000000;
   padding: 5px;
   height: 30px;
@@ -372,9 +374,21 @@ textarea {
 }
 
 .todohome {
-height: 20px;
+  flex-flow: column wrap;
+  height: 225px;
+}
+
+.itemsplist {
+  flex-grow: 2;
+  height: 150px;
 }
 
 .specialdayshome {
-height: 20px;
+  flex-flow: column wrap;
+  height: 225px;
+}
+
+.itemstdlist {
+  flex-grow: 2;
+  height: 150px;
 }
