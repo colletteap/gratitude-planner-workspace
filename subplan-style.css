@@ -1,0 +1,123 @@
+body {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background-color: #fab69d;
+padding-top: 2rem;
+}
+
+h1 {
+text-align: center;
+color: #fff
+}
+
+p {
+color: #fff
+}
+
+#containerInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#teacherName {
+    background-color: #fff;
+    height: 25px;
+    width: 140px;
+    border-radius: 3px;
+}
+
+#gradeLevel {
+    background-color: #fff;
+    height: 25px;
+    width: 140px;
+    border-radius: 3px;
+}
+
+#roomNum {
+    background-color: #fff;
+    height: 25px;
+    width: 140px;
+    border-radius: 3px;
+}
+
+#containerContacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 20px;
+}
+
+#computerInfo {
+    background-color: #fff;
+    height: 100px;
+    width: 300px;
+    border-radius: 3px;
+}
+
+#helpfulContacts {
+    background-color: #fff;
+    height: 100px;
+    width: 300px;
+    border-radius: 3px;
+}
+
+#classSchedule {
+display: flex;
+}
+
+#containerStudent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#containerPrep {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#containerClass {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#containerPlan {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#planNotes {
+display: flex;
+}
+
+#periodDetails {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.period {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#insertTime {
+width: 50px;
+}
+
+#periodPlan {
+width: 300px;
+}
+
+#resourcesNeeded {
+width: 100px;
+}
