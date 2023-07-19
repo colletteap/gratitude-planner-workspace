@@ -91,6 +91,11 @@ display: flex;
     flex-flow: column wrap;
     justify-content: center;
     gap: 1rem;
+    background-color: #fff;
+    border: solid;
+    border-radius: 3px;
+    width: 620px;
+    height: 150px;
 }
 
 #containerPlan {
@@ -113,6 +118,8 @@ display: flex;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    height: 100px;
+    border: solid;
 }
 
 #insertTime {
@@ -125,4 +132,84 @@ width: 300px;
 
 #resourcesNeeded {
 width: 100px;
+}
+
+#period1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period3 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period4 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period5 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period6 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period7 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period8 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period9 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
+}
+
+#period10 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: solid;
+    border-radius: 2px;
 }
