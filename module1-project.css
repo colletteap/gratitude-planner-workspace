@@ -391,4 +391,5 @@ textarea {
 .itemstdlist {
   flex-grow: 2;
   height: 150px;
+  text-overflow: ellipsis;
 }
