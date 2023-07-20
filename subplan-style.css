@@ -1,12 +1,16 @@
 body {
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 background-color: #fab69d;
-padding-top: 2rem;
 }
 
 h1 {
 text-align: center;
-color:black
+color:black;
+margin-bottom: 0px;
+}
+
+h2 {
+    margin-bottom: 0px;
 }
 
 p {
@@ -17,6 +21,11 @@ input {
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: auto;
+}
+
+button {
+    border-style: dashed;
+    border-radius: 2px;
 }
 
 label {
@@ -108,16 +117,29 @@ height: 15px;
     border: solid;
 }
 
-#classScheduleContainer {
-display: flex;
-padding: 5px;
-}
-
-#csTitle {
+#classScheduleTopper {
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#classScheduleContainer {
+display: flex;
+padding: 5px;
+background-color: #fff;
+    height: 200px;
+    width: 515px;
+    border-radius: 3px;
+    border: solid;
+    margin-bottom: 10px;
+}
+
+
+#firstpgBottom {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 #containerStudent {
@@ -127,6 +149,22 @@ padding: 5px;
     gap: 1rem;
 }
 
+#studentBehaviour {
+    background-color: #fff;
+    height: 100px;
+    width: 315px;
+    border-radius: 3px;
+    border: solid;
+}
+
+#emergProcedures {
+    background-color: #fff;
+    height: 100px;
+    width: 315px;
+    border-radius: 3px;
+    border: solid;
+}
+
 #containerPrep {
     display: flex;
     flex-flow: column wrap;
@@ -134,7 +172,15 @@ padding: 5px;
     gap: 1rem;
 }
 
-#containerClass {
+#notesExpectations {
+    background-color: #fff;
+    height: 100px;
+    width: 640px;
+    border-radius: 3px;
+    border: solid;
+}
+
+#containerClassList {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
