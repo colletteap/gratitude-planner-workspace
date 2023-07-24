@@ -11,6 +11,7 @@ margin-bottom: 0px;
 
 h2 {
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 p {
@@ -26,6 +27,7 @@ input {
 button {
     border-style: dashed;
     border-radius: 2px;
+    margin-bottom: 1px;
 }
 
 label {
@@ -39,7 +41,11 @@ label {
 
 #inputsmall {
     font-size: 11px;
-    width: 45px
+    width: 45px;
+    align-items: center;
+    align-content: center;
+    cursor:cell;
+    word-wrap: normal;
 }
 
 #textareamed {
@@ -98,7 +104,7 @@ height: 15px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 #computerInfo {
@@ -117,7 +123,7 @@ height: 15px;
     border: solid;
 }
 
-#classScheduleTopper {
+#classSchedule {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -134,6 +140,20 @@ background-color: #fff;
     border-radius: 3px;
     border: solid;
     margin-bottom: 10px;
+}
+
+#classScheduleDays {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#periodButton {
+    width: 50px;
+    height: 40px;
+    background-color: #fff;
+    border: dotted black;
+    align-content: center;
 }
 
 
