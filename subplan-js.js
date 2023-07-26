@@ -12,25 +12,18 @@
 
 // calendar add Days and Periods
 
-const maxDays = 10;
-const maxPeriods = 10;
-let currentDay = 1;
+const maxDivs = 10;
+let currentDivCount = 1;
 
-const addDayButton = document.getElementById("addDayButton");
-const calendar = document.getElementById("calendar");
-
-addDayButton.addEventListener("click", () => {
-    if (currentDay <= maxDays) {
-        const newDay = document.createElement("div");
-        newDay.classList.add("day");
-        newDay.innerHTML = `
-            <h2>Day ${currentDay}</h2>
-            <button class="addPeriodButton">Add Period</button>
-            <div class="periods"></div>
-        `;
-        calendar.appendChild(newDay);
-        currentDay++;
-    }
+document.getElementById("buttonDay").addEventListener("click", function() {
+  if (currentDivCount < maxDivs) {
+    currentDivCount++;
+    const originalDiv = document.getElementById("classSchedule");
+    const newDiv = originalDiv.cloneNode(true);
+    newDiv.textContent = "Class Schedule " + currentDivCount;
+    newDiv.id = "classSchedule" + currentDivCount;
+    document.getElementById("classScheduleDays").appendChild(newDiv);
+  }
 });
 
 calendar.addEventListener("click", (event) => {

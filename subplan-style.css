@@ -25,9 +25,26 @@ input {
 }
 
 button {
-    border-style: dashed;
+    border-style: double;
     border-radius: 2px;
     margin-bottom: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#buttonDay {
+    border-style: double;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+#periodButton {
+    border-style: double;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    font-size: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 label {
@@ -135,11 +152,12 @@ height: 15px;
 display: flex;
 padding: 5px;
 background-color: #fff;
-    height: 200px;
+    height: auto;
     width: 515px;
     border-radius: 3px;
     border: solid;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
 #classScheduleDays {
@@ -148,11 +166,11 @@ background-color: #fff;
     justify-content: center;
 }
 
-#periodButton {
+#period {
     width: 50px;
     height: 40px;
     background-color: #fff;
-    border: dotted black;
+    border-bottom: solid black;
     align-content: center;
 }
 
