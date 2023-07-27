@@ -301,7 +301,7 @@ label {
 
 #listNotes {
     display: flex;
-    flex-direction: row;
+    flex-flow: column wrap;
     width: 310px;
     height: 550px;
 }
