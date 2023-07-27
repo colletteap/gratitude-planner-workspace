@@ -12,6 +12,7 @@
 
 // calendar add Days and Periods
 
+// JavaScript code
 document.getElementById("buttonDay").addEventListener("click", function() {
     const MAX_DUPLICATES = 10; // Maximum number of duplicates
   
@@ -21,24 +22,35 @@ document.getElementById("buttonDay").addEventListener("click", function() {
     if (classScheduleDays.children.length < MAX_DUPLICATES) {
       // Clone the original classSchedule div
       const newClassSchedule = classSchedule.cloneNode(true);
-      // Add it to the classScheduleDays container
+      
+      // Add a delete button to the cloned div
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "Delete Day";
+      deleteButton.classList.add("deleteButton");
+      deleteButton.addEventListener("click", function() {
+        classScheduleDays.removeChild(newClassSchedule);
+      });
+      
+      newClassSchedule.appendChild(deleteButton);
+  
+      // Add the cloned div to the classScheduleDays container
       classScheduleDays.appendChild(newClassSchedule);
     }
   });
-
   
 
-const maxPeriods = 10
-
-calendar.addEventListener("click", (event) => {
-    if (event.target.classList.contains("periodButton")) {
-        const dayDiv = event.target.parentNode;
-        const periodsDiv = dayDiv.querySelector("period");
-        if (periodsDiv.children.length < maxPeriods) {
-            const newPeriod = document.createElement("div");
-            newPeriod.classList.add("period");
-            newPeriod.innerHTML = `<h3>Period ${periodsDiv.children.length + 1}</h3>`;
-            periodsDiv.appendChild(newPeriod);
-        }
+  document.getElementById("buttonPeriod").addEventListener("click", function() {
+    const MAX_DUPLICATES = 12; // Maximum number of duplicates
+  
+    const period = document.getElementById("period");
+    const classSchedule = document.getElementById("classSchedule");
+  
+    if (classSchedule.children.length < MAX_DUPLICATES) {
+      // Clone the original classSchedule div
+      const newperiod = period.cloneNode(true);
+      // Add it to the classScheduleDays container
+      classSchedule.appendChild(newperiod);
     }
-});
+  });
+  
+

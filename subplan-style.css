@@ -31,6 +31,15 @@ button {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.deleteButton {
+    border-style: double;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    font-size: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #buttonDay {
     border-style: double;
     border-radius: 2px;
@@ -39,7 +48,7 @@ button {
     font-size: 12px;
 }
 
-#periodButton {
+#buttonPeriod {
     border-style: double;
     border-radius: 2px;
     margin-bottom: 1px;
