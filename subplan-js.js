@@ -12,24 +12,28 @@
 
 // calendar add Days and Periods
 
-const maxDivs = 10;
-let currentDivCount = 1;
-
 document.getElementById("buttonDay").addEventListener("click", function() {
-  if (currentDivCount < maxDivs) {
-    currentDivCount++;
-    const originalDiv = document.getElementById("classSchedule");
-    const newDiv = originalDiv.cloneNode(true);
-    newDiv.textContent = "Class Schedule " + currentDivCount;
-    newDiv.id = "classSchedule" + currentDivCount;
-    document.getElementById("classScheduleDays").appendChild(newDiv);
-  }
-});
+    const MAX_DUPLICATES = 10; // Maximum number of duplicates
+  
+    const classSchedule = document.getElementById("classSchedule");
+    const classScheduleDays = document.getElementById("classScheduleDays");
+  
+    if (classScheduleDays.children.length < MAX_DUPLICATES) {
+      // Clone the original classSchedule div
+      const newClassSchedule = classSchedule.cloneNode(true);
+      // Add it to the classScheduleDays container
+      classScheduleDays.appendChild(newClassSchedule);
+    }
+  });
+
+  
+
+const maxPeriods = 10
 
 calendar.addEventListener("click", (event) => {
-    if (event.target.classList.contains("addPeriodButton")) {
+    if (event.target.classList.contains("periodButton")) {
         const dayDiv = event.target.parentNode;
-        const periodsDiv = dayDiv.querySelector(".periods");
+        const periodsDiv = dayDiv.querySelector("period");
         if (periodsDiv.children.length < maxPeriods) {
             const newPeriod = document.createElement("div");
             newPeriod.classList.add("period");
