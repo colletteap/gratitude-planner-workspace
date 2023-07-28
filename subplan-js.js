@@ -52,5 +52,21 @@ document.getElementById("buttonDay").addEventListener("click", function() {
       classSchedule.appendChild(newperiod);
     }
   });
+
+// Working on getting period button to work on duplicated divs
+  
+  document.getElementById("buttonPeriod").addEventListener("click", function() {
+    const MAX_DUPLICATES = 12; // Maximum number of duplicates
+  
+    const period = document.getElementById("period");
+    const newClassSchedule = document.getElementById("newClassSchedule");
+  
+    if (newClassSchedule.children.length < MAX_DUPLICATES) {
+      // Clone the original classSchedule div
+      const newperiod = period.cloneNode(true);
+      // Add it to the classScheduleDays container
+      newClassSchedule.appendChild(newperiod);
+    }
+  });
   
 
