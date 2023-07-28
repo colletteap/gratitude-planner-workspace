@@ -288,7 +288,10 @@ label {
     border: solid;
     border-radius: 3px;
     width: 620px;
-    height: 550px;
+    height: 560px;
+    align-items: center;
+    padding: 0;
+    margin-right: 0;
 }
 
 #listNames {
@@ -313,7 +316,7 @@ label {
     border-left: none;
     border-right: none;
     border-top: none;
-    width: 305px;
+    width: 285px;
     height: 12px;
     color: #778899;
 }
