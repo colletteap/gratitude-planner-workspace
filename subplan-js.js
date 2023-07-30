@@ -54,7 +54,7 @@ document.getElementById("buttonDay").addEventListener("click", function() {
   });
 
 // Working on getting period button to work on duplicated divs
-  
+
   document.getElementById("buttonPeriod").addEventListener("click", function() {
     const MAX_DUPLICATES = 12; // Maximum number of duplicates
   
@@ -69,4 +69,46 @@ document.getElementById("buttonDay").addEventListener("click", function() {
     }
   });
   
+// working on seating plan -- drag and disappear issue
 
+document.addEventListener('DOMContentLoaded', function() {
+    const seatingPlan = document.getElementById('containerSeating');
+    const addSeatBtn = document.getElementById('addSeatBtn');
+    const maxSeats = 30;
+    let seatCounter = 1;
+  
+    function handleDragStart(event) {
+        event.preventDefault(); 
+        const seat = event.target;
+        const offsetX = event.clientX - seat.getBoundingClientRect().left;
+        const offsetY = event.clientY - seat.getBoundingClientRect().top;
+  
+      function handleDrag(event) {
+        seat.style.left = (event.clientX - offsetX) + 'px';
+        seat.style.top = (event.clientY - offsetY) + 'px';
+      }
+  
+      function handleDragEnd() {
+        document.removeEventListener('mousemove', handleDrag);
+        document.removeEventListener('mouseup', handleDragEnd);
+      }
+  
+      document.addEventListener('mousemove', handleDrag);
+      document.addEventListener('mouseup', handleDragEnd);
+    }
+  
+    addSeatBtn.addEventListener('click', function() {
+      if (seatCounter >= maxSeats) return;
+      const newSeat = document.createElement('div');
+      newSeat.className = 'seat';
+      newSeat.draggable = true;
+      newSeat.innerHTML = '<textarea class="seatName" placeholder="Enter name"></textarea>';
+      containerSeating.appendChild(newSeat);
+      seatCounter++;
+    });
+  
+    containerSeating.addEventListener('dblclick', duplicateSeat);
+    containerSeating.addEventListener('dragstart', handleDragStart);
+  });
+  
+  
