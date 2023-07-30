@@ -337,6 +337,7 @@ label {
 #addSeatBtn {
     height: 35px;
     width: 50px;
+    margin-left: 5px;
 }
 
 .seat {
@@ -345,6 +346,7 @@ label {
   border: 1px solid #333;
   background-color: #fff;
   text-align: center;
+  margin-left: 5px;
 }
 
 .seatName {

@@ -77,25 +77,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxSeats = 30;
     let seatCounter = 1;
   
-    function handleDragStart(event) {
-        event.preventDefault(); 
+    function startDrag(event) {
         const seat = event.target;
-        const offsetX = event.clientX - seat.getBoundingClientRect().left;
-        const offsetY = event.clientY - seat.getBoundingClientRect().top;
-  
-      function handleDrag(event) {
-        seat.style.left = (event.clientX - offsetX) + 'px';
-        seat.style.top = (event.clientY - offsetY) + 'px';
+        const initialX = event.clientX;
+        const initialY = event.clientY;
+        const { top, left } = seat.getBoundingClientRect();
+        const offsetX = initialX - left;
+        const offsetY = initialY - top;
+      
+        function handleDrag(event) {
+          const newX = event.clientX - offsetX;
+          const newY = event.clientY - offsetY;
+          seat.style.transform = `translate(${newX}px, ${newY}px)`;
+        }
+      
+        function stopDrag() {
+          document.removeEventListener('mousemove', handleDrag);
+          document.removeEventListener('mouseup', stopDrag);
+        }
+      
+        document.addEventListener('mousemove', handleDrag);
+        document.addEventListener('mouseup', stopDrag);
       }
-  
-      function handleDragEnd() {
-        document.removeEventListener('mousemove', handleDrag);
-        document.removeEventListener('mouseup', handleDragEnd);
-      }
-  
-      document.addEventListener('mousemove', handleDrag);
-      document.addEventListener('mouseup', handleDragEnd);
-    }
   
     addSeatBtn.addEventListener('click', function() {
       if (seatCounter >= maxSeats) return;
