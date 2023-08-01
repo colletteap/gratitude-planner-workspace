@@ -28,7 +28,8 @@
         <div id="containerContacts">
             <div id="computerInfo">
                 <label>Computer Info<br></label>
-                <textarea id="textareamed" placeholder="user login, powerschool login, google classroom details.."></textarea>
+                <textarea id="textareamed"
+                    placeholder="user login, powerschool login, google classroom details.."></textarea>
             </div>
             <div id="helpfulContacts">
                 <label>Helpful Contacts<br></label>
@@ -81,7 +82,8 @@
             <div id="containerStudent">
                 <div id="notesExpectations">
                     <label>Notes<br></label>
-                    <textarea id="textarealg" placedholder="morning prep, duty schedule, student expectations, lab set up procedures, list of useful teaching softwares, extra materials and resources......">
+                    <textarea id="textarealg"
+                        placedholder="morning prep, duty schedule, student expectations, lab set up procedures, list of useful teaching softwares, extra materials and resources......">
                 </textarea>
                 </div>
 
@@ -159,41 +161,52 @@
     </div>
 
     <div id="containerSeating">
-        <button id="addSeatBtn">Add Seat</button>
-    <div class="seat" draggable="true">
-      <textarea class="seatName" placeholder="Enter name"></textarea>
-    </div>
+        <h2>Seating Chart<br></h2>
+        <div id="seatingChart" ondrop="drop_handler(event)"
+        ondragover="dragover_handler(event)">
+            <button id="addSeatBtn">Add Seat</button>
+            <div class="seat" draggable="true" ondragstart="dragstart_handler(event)">
+                <textarea class="seatName" placeholder="Enter name"></textarea>
+            </div>
+        </div>
     </div>
 
     <!--Start New Page For Printing-->
 
     <div id="containerPlan">
-
+        <button id="addPeriodPlanBtn">Add Period Plan</button>
+<div id="periodDiv">
         <div id="period1" class="periodTitle">Period 1</div>
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
-
+</div>
         <div id="period2" class="periodTitle">Period 2</div>
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
@@ -201,13 +214,16 @@
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
@@ -215,13 +231,16 @@
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
@@ -229,13 +248,16 @@
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
@@ -243,13 +265,16 @@
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
@@ -257,13 +282,16 @@
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
@@ -271,13 +299,16 @@
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
@@ -285,29 +316,19 @@
 
         <div id="periodDetails" class="period">
             <div id="insertTime">
-
+                <h3>Time</h3>
+                <textarea id="textareaTime" placeholder="8:30am"></textarea>
             </div>
             <div id="periodPlan">
-
+                <h3>Plan</h3>
+                <textarea id="textareaPlan" placeholder="math textbook, page 54 - covering new unit"></textarea>
             </div>
             <div id="resourcesNeeded">
-
+                <h3>Resources Needed</h3>
+                <textarea id="textareaResources" placeholder="Grade 8 Math textbook"></textarea>
             </div>
         </div>
 
-        <div id="period10" class="periodTitle">Period 10</div>
-
-        <div id="periodDetails" class="period">
-            <div id="insertTime">
-
-            </div>
-            <div id="periodPlan">
-
-            </div>
-            <div id="resourcesNeeded">
-
-            </div>
-        </div>
 
     </div>
 
