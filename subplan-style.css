@@ -64,6 +64,10 @@ button {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#saveButton {
+    align-items: center;
+}
+
 #printable-section {
     display: block;
 }
