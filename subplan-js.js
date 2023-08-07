@@ -1,8 +1,4 @@
-// more to come
-
 // add date to top
-
-// input for each white box
 
 // local storage for all inputs
 
@@ -12,7 +8,10 @@
 
 // calendar add Days and Periods
 
-// JavaScript code
+// Click to Add Day to Class Schedule
+
+let newClassSchedule;
+
 document.getElementById("buttonDay").addEventListener("click", function() {
     const MAX_DUPLICATES = 10; // Maximum number of duplicates
   
@@ -21,7 +20,7 @@ document.getElementById("buttonDay").addEventListener("click", function() {
   
     if (classScheduleDays.children.length < MAX_DUPLICATES) {
       // Clone the original classSchedule div
-      const newClassSchedule = classSchedule.cloneNode(true);
+      newClassSchedule = classSchedule.cloneNode(true);
       
       // Add a delete button to the cloned div
       const deleteButton = document.createElement("button");
@@ -51,41 +50,24 @@ document.getElementById("buttonDay").addEventListener("click", function() {
       const newperiod = period.cloneNode(true);
       // Add it to the classScheduleDays container
       classSchedule.appendChild(newperiod);
+  
     }
 
-    if (newClassSchedule.children.length < MAX_DUPLICATES) {
-        const newperiod = period.cloneNode(true);
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete Day";
-        deleteButton.classList.add("deleteButton");
-        deleteButton.addEventListener("click", function() {
-          classScheduleDays.removeChild(newClassSchedule);
-        });
-        
-        newClassSchedule.appendChild(deleteButton);
+    document.getElementById("buttonPeriod").addEventListener("click", function() {
+      const MAX_DUPLICATES = 12; // Maximum number of duplicates
     
-        // Add the cloned div to the classScheduleDays container
-        //change id
-        classScheduleDays.appendChild(newClassSchedule);
-      classSchedule.appendChild(newperiod);
-    }
-  });
-
-// Working on getting period button to work on duplicated divs
-
-  document.getElementById("buttonPeriod").addEventListener("click", function() {
-    const MAX_DUPLICATES = 12; // Maximum number of duplicates
+      const period = document.getElementById("period");
+      
+    
+      if (newClassSchedule.children.length < MAX_DUPLICATES) {
+        // Clone the original classSchedule div
+        const newperiod = period.cloneNode(true);
+        // Add it to the classScheduleDays container
+        newClassSchedule.appendChild(newperiod);
+        
+      }})
   
-    const period = document.getElementById("period");
-    const classSchedule = document.getElementById("classSchedule");
-  
-    if (classSchedule.children.length < MAX_DUPLICATES) {
-      // Clone the original classSchedule div
-      const newperiod = period.cloneNode(true);
-      // Add it to the classScheduleDays container
-      classSchedule.appendChild(newperiod);
-    }
-  });
+  })
   
 //Looping Student Names 
 

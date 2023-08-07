@@ -91,6 +91,7 @@ label {
     align-content: center;
     cursor: cell;
     word-wrap: normal;
+    resize: none;
 }
 
 #textarealg {
