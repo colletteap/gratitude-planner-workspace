@@ -300,23 +300,23 @@ display: flex;
 flex-flow: column wrap;
 justify-content: center;
 align-items: center;
+height: auto;
 }
 
 #classList {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
     gap: 1rem;
     background-color: #fff;
     border: solid;
     border-radius: 3px;
     width: 650px;
-    height: 560px;
+    height: 950px;
     margin: auto;
 }
 
 #listNames {
-    border-right: solid 2px #778899;
     display: flex;
     flex-flow: column wrap;
     width: 310px;
@@ -330,16 +330,23 @@ align-items: center;
     height: 550px;
 }
 
-#textareanames {
+#studentNames {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 11px;
-    border-bottom: solid 2px black;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    margin-top: 15px;
+    margin-left: 5px;
     width: 285px;
     height: 12px;
     color: #778899;
+}
+
+#studentNotes {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    margin-top: 15px;
+    width: 285px;
+    height: 12px;
+    color: #778899; 
 }
 
 #containerSeating {

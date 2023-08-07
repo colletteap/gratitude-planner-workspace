@@ -87,6 +87,53 @@ document.getElementById("buttonDay").addEventListener("click", function() {
     }
   });
   
+//Looping Student Names 
+
+const studentNamesDiv = document.getElementById('studentNames');
+
+// Looping
+
+for (let i = 1; i <= 30; i++) {
+  const textarea = document.createElement('textarea');
+  textarea.id = `student-name-${i}`;
+  textarea.placeholder = `Student ${i} Name`;
+  textarea.style.width = '100%'; 
+  textarea.style.height = '12px'; 
+  textarea.style.border = '1px solid #ccc'; 
+  textarea.style.padding = '5px'; 
+  textarea.style.marginBottom = '5px'; 
+  textarea.style.resize = 'none';
+  textarea.style.fontFamily = 'Verdana, Geneva, Tahoma, sans-serif';
+  textarea.style.fontSize = '10px';
+  textarea.style.overflow = 'hidden';
+  studentNamesDiv.appendChild(textarea);
+}
+
+// Looping Student Notes
+const studentNotesDiv = document.getElementById('studentNotes');
+
+// Looping
+
+for (let i = 1; i <= 30; i++) {
+  const textarea = document.createElement('textarea');
+  textarea.id = `student-note-${i}`;
+  textarea.placeholder = `Student ${i} Notes`;
+  textarea.style.width = '100%'; 
+  textarea.style.height = '12px'; 
+  textarea.style.border = '1px solid #ccc'; 
+  textarea.style.padding = '5px'; 
+  textarea.style.marginBottom = '5px';
+  textarea.style.marginLeft = '5px';
+  textarea.style.resize = 'none';
+  textarea.style.fontFamily = 'Verdana, Geneva, Tahoma, sans-serif';
+  textarea.style.fontSize = '10px';
+  textarea.style.overflow = 'hidden';
+  studentNotesDiv.appendChild(textarea);
+}
+
+
+
+
 // working on seating plan -- drag and disappear issue
 
 document.addEventListener('DOMContentLoaded', function() {
