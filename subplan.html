@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div id="printable-section">
+    
         <h1>Substitute Plan</h1>
 
         <div id="containerInfo">
@@ -20,7 +20,7 @@
                 <input id="inputsmall">
             </div>
             <div id="roomNum">
-                <label>Room #</label>
+                <label>Date</label>
                 <input id="inputsmall">
             </div>
         </div>
@@ -45,6 +45,7 @@
                     <div id="classSchedule">
                         <textarea id="textareasm" placeholder="Day #"></textarea>
                         <button id="buttonPeriod">Add Period</button>
+                        <button id="buttonPeriodDelete">Delete Period</button>
                         <div id="period">
                             <textarea id="inputsmall" placeholder="Period 1 Math 8:30am"></textarea>
                         </div>
@@ -63,7 +64,7 @@
 
                     </div>
                 </div>
-            </div>
+
         </div>
 
         <div id="firstpgBottom">
@@ -168,7 +169,7 @@
         <div id="seatingChart" ondrop="drop_handler(event)"
         ondragover="dragover_handler(event)">
             <button id="addSeatBtn">Add Seat</button>
-            <div class="seat" draggable="true" ondragstart="dragstart_handler(event)">
+            <div id="seat" draggable="true" ondragstart="dragstart_handler(event)">
                 <textarea class="seatName" placeholder="Enter name"></textarea>
             </div>
         </div>

@@ -34,6 +34,7 @@ document.getElementById("buttonDay").addEventListener("click", function() {
       newClassSchedule.appendChild(deleteButton);
   
       // Add the cloned div to the classScheduleDays container
+      //change id
       classScheduleDays.appendChild(newClassSchedule);
     }
   });
@@ -54,7 +55,19 @@ document.getElementById("buttonDay").addEventListener("click", function() {
 
     if (newClassSchedule.children.length < MAX_DUPLICATES) {
         const newperiod = period.cloneNode(true);
-        newClassSchedule.appendChild(newperiod);
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete Day";
+        deleteButton.classList.add("deleteButton");
+        deleteButton.addEventListener("click", function() {
+          classScheduleDays.removeChild(newClassSchedule);
+        });
+        
+        newClassSchedule.appendChild(deleteButton);
+    
+        // Add the cloned div to the classScheduleDays container
+        //change id
+        classScheduleDays.appendChild(newClassSchedule);
+      classSchedule.appendChild(newperiod);
     }
   });
 

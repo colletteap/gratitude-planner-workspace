@@ -34,9 +34,11 @@ input {
 
 button {
     border-style: double;
-    border-radius: 2px;
+    border-radius: 10px;
     margin-bottom: 1px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #4682B4;
+    color:#fff;
 }
 
 .deleteButton {
@@ -56,7 +58,7 @@ button {
     font-size: 12px;
 }
 
-#buttonPeriod {
+#buttonPeriod, #buttonPeriodDelete {
     border-style: double;
     border-radius: 2px;
     margin-bottom: 1px;
@@ -72,28 +74,6 @@ button {
   align-items: center;
 }
 
-#printable-section {
-    display: block;
-}
-
-@media print {
-    @page {
-        size: A4;
-        margin: 2cm;
-
-        @top-left {
-            content: "My Website - Page " counter(page);
-        }
-
-        @bottom-right {
-            content: "Printed on " counter(date);
-        }
-    }
-
-    body * {
-        display: none;
-    }
-}
 
 label {
     text-decoration: underline;
@@ -317,7 +297,7 @@ label {
 
 #containerClassList {
 display: flex;
-flex-flow: row wrap;
+flex-flow: column wrap;
 justify-content: center;
 align-items: center;
 }
