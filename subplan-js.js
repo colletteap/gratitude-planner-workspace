@@ -39,7 +39,7 @@ document.getElementById("buttonDay").addEventListener("click", function() {
   });
   
 
-  document.getElementById("buttonPeriod").addEventListener("click", function() {
+  document.getElementsByClassName("buttonPeriod").addEventListener("click", function() {
     const MAX_DUPLICATES = 12; // Maximum number of duplicates
   
     const period = document.getElementById("period");
@@ -50,24 +50,10 @@ document.getElementById("buttonDay").addEventListener("click", function() {
       const newperiod = period.cloneNode(true);
       // Add it to the classScheduleDays container
       classSchedule.appendChild(newperiod);
-  
-    }
+    }});
+     
+ 
 
-    document.getElementById("buttonPeriod").addEventListener("click", function() {
-      const MAX_DUPLICATES = 12; // Maximum number of duplicates
-    
-      const period = document.getElementById("period");
-      
-    
-      if (newClassSchedule.children.length < MAX_DUPLICATES) {
-        // Clone the original classSchedule div
-        const newperiod = period.cloneNode(true);
-        // Add it to the classScheduleDays container
-        newClassSchedule.appendChild(newperiod);
-        
-      }})
-  
-  })
   
 //Looping Student Names 
 
