@@ -39,7 +39,7 @@ document.getElementById("buttonDay").addEventListener("click", function() {
   });
   
 
-  document.getElementsByClassName("buttonPeriod").addEventListener("click", function() {
+  document.getElementById("buttonPeriod").addEventListener("click", function() {
     const MAX_DUPLICATES = 12; // Maximum number of duplicates
   
     const period = document.getElementById("period");
