@@ -1,0 +1,131 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fab69d;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 0px;
+}
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+h3 {
+    margin-bottom: 0px;
+    margin-top: 2px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    color: black
+}
+
+input {
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: auto;
+}
+
+
+button {
+    border-style: double;
+    border-radius: 10px;
+    margin-bottom: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #4682B4;
+    color:#fff;
+}
+
+.deleteButton {
+    border-style: double;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    font-size: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#buttonDay {
+    border-style: double;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+#buttonPeriod, #buttonPeriodDelete {
+    border-style: double;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    font-size: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#Schedule {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#classSchedule {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleContainer {
+    display: flex;
+    padding: 5px;
+    background-color: #fff;
+    height: auto;
+    width: auto;
+    border-radius: 3px;
+    border: solid;
+    margin-bottom: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+#classScheduleDays {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#period {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border-bottom: solid black;
+    align-content: center;
+}
+
+#textareasm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    border: none;
+    width: 40px;
+    height: 15px;
+    color: #778899;
+}
+
+#inputsmall {
+    font-size: 10px;
+    width: 45px;
+    align-items: center;
+    align-content: center;
+    cursor: cell;
+    word-wrap: normal;
+    resize: none;
+}
+
