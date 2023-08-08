@@ -7,52 +7,33 @@
 // calendar add Days and Periods
 
 
-document.getElementById("buttonPeriod").addEventListener("click", function () {
-  const MAX_DUPLICATES = 12; // Maximum number of duplicates
 
-  const period = document.getElementById("period");
-  const classSchedule = document.getElementById("classSchedule");
 
-  if (classSchedule.children.length < MAX_DUPLICATES) {
-    // Clone the original classSchedule div
-    const newperiod = period.cloneNode(true);
-    // Add it to the classScheduleDays container
-    classSchedule.appendChild(newperiod);
-  }
+// Hiding Days
+
+const hiddenButton = document.getElementById("hiddenButton");
+        const classScheduleDay6 = document.getElementById("classScheduleDay6");
+
+        // Add a click event listener to the button
+        hiddenButton.addEventListener("click", function() {
+            
+            classScheduleDay6.style.display = "none";
+        });
+
+// Adding Unhide Button
+
+const unhideButton = document.getElementById("unhideButton");
+
+hiddenButton.addEventListener("click", function () {
+
+  unhideButton.style.display = "block";
 });
 
+unhideButton.addEventListener("click", function () {
 
-// Attempt at looping Days in Class Schedule
-
-// Get the parent container element
-const classcontainer = document.getElementById("classScheduleDay1");
-
-// Number of periods you want to create
-const numPeriods = 10;
-
-for (let i = 0; i < numPeriods; i++) {
-
-  const periodDiv = document.createElement("periodDiv");
-  periodDiv.id = "period";
-
-  const textareaPeriod = document.createElement("textarea");
-  textareaPeriod.id = "inputsmall";
-  textareaPeriod.placeholder = "Period " + (i + 1) + " Math 8:30am";
-
-  periodDiv.appendChild(textareaPeriod);
-  classcontainer.appendChild(periodDiv);
-
-}
-
-
-// Trying to add 'Day 1'
-
-  const textareaDay = document.createElement("textareaDay");
-  textareaDay.id = "textareasm";
-  textareaDay.placeholder = "Day " + (i + 1);
-
-  classcontainer.insertBefore(textareaDay, classcontainer.firstChild);
-
+  classScheduleDay6.style.display = "block";
+  unhideButton.style.display = "none";
+})
 
 
 

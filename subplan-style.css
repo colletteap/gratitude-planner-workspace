@@ -33,12 +33,13 @@ input {
 
 
 button {
-    border-style: double;
-    border-radius: 10px;
+    border-style: groove;
+    border-radius: 5px;
     margin-bottom: 1px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #4682B4;
     color:#fff;
+    font-size: 10px;
 }
 
 .deleteButton {
@@ -72,6 +73,23 @@ button {
     display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#hiddenButton {
+    align-self: center;
+    margin-top: 5px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#unhideButton {
+    align-self: center;
+    margin-top: 5px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
 
@@ -234,6 +252,78 @@ label {
 }
 
 #classScheduleDay2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay3 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay4 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay5 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay6 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay7 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay8 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay9 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay10 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
