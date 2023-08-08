@@ -182,18 +182,3 @@ document.getElementById("addPeriodPlanBtn").addEventListener("click", function()
   });
 
   //Saving to Local Storage
-
-const dataInput = document.getElementById('input');
-const saveButton = document.getElementById('saveButton');
-
-dataInput.value = localStorage.getItem('savedData');
-saveButton.addEventListener('click', saveData);
-
-// Function to save input data to local storage
-function saveData() {
-  // Get the input value
-  const data = dataInput.value;
-
-  // Save the data to local storage
-  localStorage.setItem('savedData', data);
-}
