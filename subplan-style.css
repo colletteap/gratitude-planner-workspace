@@ -209,13 +209,31 @@ label {
 
 #Schedule {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-#classSchedule {
+#notesContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#classScheduleDay1 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+}
+
+#classScheduleDay2 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -226,15 +244,18 @@ label {
 
 #classScheduleContainer {
     display: flex;
+    flex-flow: row wrap;
     padding: 5px;
     background-color: #fff;
     height: auto;
-    width: auto;
+    width: 700px;
     border-radius: 3px;
     border: solid;
     margin-bottom: 10px;
     padding: 10px;
     justify-content: center;
+    align-self: center;
+    margin-top: 10px;
 }
 
 #classScheduleDays {
