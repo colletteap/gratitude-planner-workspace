@@ -6,6 +6,27 @@
 
 // calendar add Days and Periods
 
+//Saving to Local Storage
+
+const inputsAndTextareas = document.querySelectorAll('input, textarea');
+
+inputsAndTextareas.forEach((element, index) => {
+  element.value = localStorage.getItem(`savedData_${index}`);
+});
+
+const saveButton = document.getElementById('saveButton');
+if (saveButton) {
+  saveButton.addEventListener('click', () => saveData(inputsAndTextareas));
+}
+
+function saveData(elements) {
+  elements.forEach((element, index) => {
+    localStorage.setItem(`savedData_${index}`, element.value);
+  });
+}
+
+
+
 // Add Period Button
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -17,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
   addPeriodButton.addEventListener('click', function () {
     if (clonedPeriodCount < 5) {
       const clonedPeriod = periodDiv.cloneNode(true);
+
     classScheduleContainer.querySelectorAll('.day-container').forEach(dayContainer => {
       dayContainer.appendChild(clonedPeriod.cloneNode(true));
     });
@@ -25,7 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('If you have more than 10 periods in a day, please see your administrator... something went wrong.');
     }
     });
+
   });
+
+
 
 
 // Hiding Days - hiding day 6

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test dynamic content</title>
+  </head>
+
+  <style>
+    #container {
+      width: 800px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .day {
+      width: 200px;
+      padding: 1rem 0;
+    }
+  </style>
+  <body>
+    <button id="add-day">Add Day</button>
+    <div id="container">
+      <div class="day">
+        <input placeholder="Day 1">
+        <button onclick="addPeriod(event)">Add Period</button>
+        <button onclick="deleteLastPeriod(event)">Delete Period</button>
+        <div>
+          <textarea placeholder="Period 1 Math 8:30am"></textarea>
+        </div>
+        <div><textarea></textarea></div>
+        <div><textarea></textarea></div>
+        <div><textarea></textarea></div>
+        <div><textarea></textarea></div>
+      </div>
+    </div>
+
+    <script>
+      // max number of days in the day list
+      const MAX_DAYS = 10;
+      // max number of periods in a day
+      const MAX_PERIODS = 10;
+      // min number of periods in a day
+      const MIN_PERIODS = 5;
+
+      function currentTextareaCount(elem) {
+        return elem.querySelectorAll('textarea').length;
+      }
+
+      function addPeriod(event) {
+        // go up the tree one level to the div.day and add a text area
+        let parentDiv = event.currentTarget.parentElement;
+        if (currentTextareaCount(parentDiv) >= MAX_PERIODS) {
+          alert(`Max number of periods created => ${MAX_PERIODS}`);
+          return;
+        }
+        parentDiv.innerHTML += `<div><textarea></textarea></div>`
+      }
+
+      function deleteLastPeriod(event) {
+        // find the last div/element in the parent div.day and remove
+        let parentDiv = event.currentTarget.parentElement;
+        if (currentTextareaCount(parentDiv) <= MIN_PERIODS) {
+          alert(`Min number of periods, can't delete any more => ${MIN_PERIODS}`);
+          return;
+        }
+        parentDiv.lastElementChild.remove();
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const dayContainer = document.getElementById('container');
+        const addDayBtn = document.getElementById('add-day');
+        
+        addDayBtn.addEventListener('click', () => {
+          if (dayContainer.childElementCount >= MAX_DAYS) {
+            alert('Max number of days created!');
+            return;
+          }
+
+          const nextDayNum = ++dayContainer.childElementCount;
+          const dayTemplate = `
+            <div class="day">
+              <input placeholder="Day ${nextDayNum}">
+              <br>
+              <button onclick="addPeriod(event)">Add Period</button>
+              <button onclick="deleteLastPeriod(event)">Delete Period</button>
+              <div>
+                <textarea placeholder="Period ${nextDayNum} Math 8:30am"></textarea>
+              </div>
+              <div><textarea></textarea></div>
+              <div><textarea></textarea></div>
+              <div><textarea></textarea></div>
+              <div><textarea></textarea></div>
+            </div>
+          `;
+          dayContainer.innerHTML += dayTemplate;
+        });
+      });
+    </script>
+  </body>
+</html>
