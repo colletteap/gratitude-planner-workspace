@@ -6,35 +6,151 @@
 
 // calendar add Days and Periods
 
+// Add Period Button
+
+document.addEventListener('DOMContentLoaded', function () {
+  const addPeriodButton = document.getElementById('buttonPeriod');
+  const classScheduleContainer = document.querySelector('.classScheduleDays');
+  const periodDiv = document.getElementById('period');
+
+  addPeriodButton.addEventListener('click', function () {
+    const clonedPeriod = periodDiv.cloneNode(true);
+    classScheduleContainer.querySelectorAll('.day-container').forEach(dayContainer => {
+      dayContainer.appendChild(clonedPeriod.cloneNode(true));
+    });
+  });
+});
 
 
+// Hiding Days - hiding day 6
 
-// Hiding Days
-
-const hiddenButton = document.getElementById("hiddenButton");
+const hiddenButton6 = document.getElementById("hiddenButton6");
         const classScheduleDay6 = document.getElementById("classScheduleDay6");
 
         // Add a click event listener to the button
-        hiddenButton.addEventListener("click", function() {
+        hiddenButton6.addEventListener("click", function() {
             
             classScheduleDay6.style.display = "none";
         });
 
 // Adding Unhide Button
 
-const unhideButton = document.getElementById("unhideButton");
+const unhideButton6 = document.getElementById("unhideButton6");
 
-hiddenButton.addEventListener("click", function () {
+hiddenButton6.addEventListener("click", function () {
 
-  unhideButton.style.display = "block";
+  unhideButton6.style.display = "flex";
 });
 
-unhideButton.addEventListener("click", function () {
+unhideButton6.addEventListener("click", function () {
 
-  classScheduleDay6.style.display = "block";
-  unhideButton.style.display = "none";
+  classScheduleDay6.style.display = "flex";
+  unhideButton6.style.display = "none";
 })
 
+// Hide/Unhide Day 7
+
+const hiddenButton7 = document.getElementById("hiddenButton7");
+        const classScheduleDay7 = document.getElementById("classScheduleDay7");
+
+        // Add a click event listener to the button
+        hiddenButton7.addEventListener("click", function() {
+            
+            classScheduleDay7.style.display = "none";
+        });
+
+// Adding Unhide Button
+
+const unhideButton7 = document.getElementById("unhideButton7");
+
+hiddenButton7.addEventListener("click", function () {
+
+  unhideButton7.style.display = "flex";
+});
+
+unhideButton7.addEventListener("click", function () {
+
+  classScheduleDay7.style.display = "flex";
+  unhideButton7.style.display = "none";
+})
+
+// Hide/Unhide Day 8
+
+const hiddenButton8 = document.getElementById("hiddenButton8");
+        const classScheduleDay8 = document.getElementById("classScheduleDay8");
+
+        // Add a click event listener to the button
+        hiddenButton8.addEventListener("click", function() {
+            
+            classScheduleDay8.style.display = "none";
+        });
+
+// Adding Unhide Button
+
+const unhideButton8 = document.getElementById("unhideButton8");
+
+hiddenButton8.addEventListener("click", function () {
+
+  unhideButton8.style.display = "flex";
+});
+
+unhideButton8.addEventListener("click", function () {
+
+  classScheduleDay8.style.display = "flex";
+  unhideButton8.style.display = "none";
+})
+
+// Hide/Unhide Day 9
+
+const hiddenButton9 = document.getElementById("hiddenButton9");
+        const classScheduleDay9 = document.getElementById("classScheduleDay9");
+
+        // Add a click event listener to the button
+        hiddenButton9.addEventListener("click", function() {
+            
+            classScheduleDay9.style.display = "none";
+        });
+
+// Adding Unhide Button
+
+const unhideButton9 = document.getElementById("unhideButton9");
+
+hiddenButton9.addEventListener("click", function () {
+
+  unhideButton9.style.display = "flex";
+});
+
+unhideButton9.addEventListener("click", function () {
+
+  classScheduleDay9.style.display = "flex";
+  unhideButton9.style.display = "none";
+})
+
+// Hide/Unhide Day 10
+
+const hiddenButton10 = document.getElementById("hiddenButton10");
+        const classScheduleDay10 = document.getElementById("classScheduleDay10");
+
+        // Add a click event listener to the button
+        hiddenButton10.addEventListener("click", function() {
+            
+            classScheduleDay10.style.display = "none";
+        });
+
+// Adding Unhide Button
+
+const unhideButton10 = document.getElementById("unhideButton10");
+
+hiddenButton10.addEventListener("click", function () {
+
+  unhideButton10.style.display = "flex";
+});
+
+unhideButton10.addEventListener("click", function () {
+
+  classScheduleDay10.style.display = "flex";
+  unhideButton10.style.display = "none";
+})
 
 
 //Looping Student Names 

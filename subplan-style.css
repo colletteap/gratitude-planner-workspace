@@ -75,7 +75,7 @@ button {
   align-items: center;
 }
 
-#hiddenButton {
+#hiddenButton6, #hiddenButton7, #hiddenButton8, #hiddenButton9, #hiddenButton10 {
     align-self: center;
     margin-top: 5px;
     display: flex;
@@ -83,7 +83,7 @@ button {
   align-items: center;
 }
 
-#unhideButton {
+#unhideButton6, #unhideButton7, #unhideButton8, #unhideButton9, #unhideButton10 {
     align-self: center;
     margin-top: 5px;
     display: flex;
@@ -91,7 +91,6 @@ button {
   align-items: center;
   display: none;
 }
-
 
 label {
     text-decoration: underline;
@@ -233,6 +232,10 @@ label {
     text-align: center;
 }
 
+.day-container {
+    display:flex;
+}
+
 #notesContainer {
     display: flex;
     flex-flow: row wrap;
@@ -240,6 +243,11 @@ label {
     align-items: center;
     text-align: center;
     margin-top: 10px;
+}
+
+.classScheduleTitle {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 #classScheduleDay1 {
@@ -348,7 +356,7 @@ label {
     margin-top: 10px;
 }
 
-#classScheduleDays {
+.classScheduleDays {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
