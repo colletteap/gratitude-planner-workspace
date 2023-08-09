@@ -93,9 +93,7 @@ para2.addEventListener('click', () => { showDivById('myJournal') });
 
 const dataInput = document.getElementById('input');
 const saveButton = document.getElementById('saveButton');
-// this is all I had to change to make things work
-// there was an error about re-assigning a const (needed to assign the data to the `value` property of the text input)
-// once part of the script has an error the remaining code stops executing so that's likely why your changes weren't having any affect
+
 dataInput.value = localStorage.getItem('savedData');
 saveButton.addEventListener('click', saveData);
 
@@ -107,6 +105,8 @@ function saveData() {
   // Save the data to local storage
   localStorage.setItem('savedData', data);
 }
+
+// Show Core Values Div
 
 const para3 = document.querySelector('#core-values');
 para3.addEventListener('click', () => { showDivById('mycorevalues') });
