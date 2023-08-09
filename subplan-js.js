@@ -12,14 +12,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const addPeriodButton = document.getElementById('buttonPeriod');
   const classScheduleContainer = document.querySelector('.classScheduleDays');
   const periodDiv = document.getElementById('period');
+  let clonedPeriodCount = 0;
 
   addPeriodButton.addEventListener('click', function () {
-    const clonedPeriod = periodDiv.cloneNode(true);
+    if (clonedPeriodCount < 5) {
+      const clonedPeriod = periodDiv.cloneNode(true);
     classScheduleContainer.querySelectorAll('.day-container').forEach(dayContainer => {
       dayContainer.appendChild(clonedPeriod.cloneNode(true));
     });
+      clonedPeriodCount++;
+    } else {
+      alert('If you have more than 10 periods in a day, please see your administrator... something went wrong.');
+    }
+    });
   });
-});
 
 
 // Hiding Days - hiding day 6

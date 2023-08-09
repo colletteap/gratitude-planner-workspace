@@ -81,6 +81,10 @@ button {
     display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
+  background-color: #fffff0;
+  color:#333;
+  font-weight: 500;
 }
 
 #unhideButton6, #unhideButton7, #unhideButton8, #unhideButton9, #unhideButton10 {
@@ -90,6 +94,9 @@ button {
   justify-content: center;
   align-items: center;
   display: none;
+  background-color: #fffff0;
+  color:#333;
+  font-weight: 500;
 }
 
 label {
@@ -111,6 +118,11 @@ label {
     word-wrap: normal;
     resize: none;
     overflow: hidden;
+}
+
+.inputsmall {
+    width: 50px;
+    height: 10px;
 }
 
 #textarealg {
@@ -208,7 +220,6 @@ label {
 #roomNum {
     background-color: #fff;
     height: 25px;
-    width: 110px;
     border-radius: 3px;
     border: solid;
     padding: 3px;
@@ -382,6 +393,10 @@ label {
     background-color: #fff;
     border-bottom: solid black;
     align-content: center;
+}
+
+.bottomMargin {
+    margin-bottom: 30px;
 }
 
 
