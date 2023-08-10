@@ -312,13 +312,14 @@
             </div>
         </div>
 
+        <!--Seating Chart-->
+
         <div id="containerSeating">
             <h2>Seating Chart<br></h2>
             <div id="seatingChart" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
                 <button id="addSeatBtn">Add Seat</button>
-                <div id="seat" draggable="true" ondragstart="dragstart_handler(event)">
-                    <textarea class="seatName" placeholder="Enter name"></textarea>
-                </div>
+                <div class=".droppableSeatingChart"></div>
+               <!--Want to create so that new seat divs wrap and follow styling of their container--> 
             </div>
         </div>
 
@@ -327,7 +328,7 @@
         <div class="containerPlan">
 
             <h2>Plan By Period<br></h2>
-            
+
             <button id="addPeriodPlanBtn">Add Period Plan</button>
 
             <div id="periodDiv" class="periodDiv">

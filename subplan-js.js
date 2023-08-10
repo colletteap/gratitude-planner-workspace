@@ -220,41 +220,55 @@ document.addEventListener('DOMContentLoaded', function () {
   const maxSeats = 30;
   let seatCounter = 1;
 
-  const seat = document.getElementById('seat');
-  let offsetX, offsetY;
-  let isDragging = false;
-
-  seat.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - seat.getBoundingClientRect().left;
-    offsetY = e.clientY - seat.getBoundingClientRect().top;
-    seat.style.cursor = 'grabbing';
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const x = e.clientX - offsetX;
-    const y = e.clientY - offsetY;
-    seat.style.left = x + 'px';
-    seat.style.top = y + 'px';
-  });
-
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-    seat.style.cursor = 'grab';
-  });
+// Add Seat Button Code
 
   addSeatBtn.addEventListener('click', function () {
     if (seatCounter >= maxSeats) return;
     const newSeat = document.createElement('div');
     newSeat.className = 'seat';
+    newSeat.id = 'seat'
+    newSeat.style.cursor = "move"
     newSeat.draggable = true;
     newSeat.innerHTML = '<textarea class="seatName" placeholder="Enter name"></textarea>';
     seatingChart.appendChild(newSeat);
     seatCounter++;
   });
-
 });
+
+// dragging and dropping
+
+var draggables = document.getElementsByClassName("seat");
+
+      for (var i = 0; i < draggables.length; i++) {
+        draggables[i].addEventListener("dragstart", function (event) {
+          event.dataTransfer.setData("seat", event.target.id);
+        });
+      }
+
+      var droppables = document.getElementsByClassName("droppableSeatingChart");
+
+      for (var i = 0; i < droppables.length; i++) {
+        droppables[i].addEventListener("dragover", function (event) {
+          event.preventDefault();
+          event.target.classList.add("drag-over");
+        });
+
+        droppables[i].addEventListener("dragleave", function (event) {
+          event.target.classList.remove("drag-over");
+        });
+
+        droppables[i].addEventListener("drop", function (event) {
+          var id = event.dataTransfer.getData("text");
+          var draggableElement = document.getElementById(id);
+          event.target.appendChild(draggableElement);
+          event.target.classList.remove("drag-over");
+          event.target.classList.add("dropped");
+          setTimeout(function () {
+            event.target.classList.remove("dropped");
+          }, 1000);
+        });
+      }
+
 
 
 // trying new code to get drag to work
