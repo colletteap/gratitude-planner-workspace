@@ -15,11 +15,15 @@
             <label>Teacher Name</label>
             <input id="inputteach">
         </div>
-        <div id="gradeLevel">
+        <div class="topOfPageGradeDate">
             <label>Grade</label>
             <input class="inputsmall">
         </div>
-        <div id="roomNum">
+        <div class="topOfPageGradeDate">
+            <label>Date</label>
+            <input class="inputsmall">
+        </div>
+        <div class="day">
             <label>Day</label>
             <input class="inputsmall">
         </div>
@@ -37,18 +41,19 @@
         </div>
     </div>
 
+    <div class="classScheduleTitle">
+
+        <h2>Class Schedule<br></h2>
+
+        <button id="buttonPeriod">Add Period</button>
+        <button id="buttonPeriodDelete">Delete Period</button>
+        
+    </div>
     <div id="Schedule">
 
         <div id="classScheduleContainer">
 
-            <div class="classScheduleTitle">
-
-                <h2>Class Schedule<br></h2>
-
-                <button id="buttonPeriod">Add Period</button>
-                <button id="buttonPeriodDelete">Delete Period</button>
-                
-            </div>
+           
             
             <div class="classScheduleDays">
 
@@ -324,7 +329,7 @@
             <button id="addPeriodPlanBtn">Add Period Plan</button>
             <div id="periodDiv">
                 <div id="period1" class="periodTitle">
-                    <input id="inputsmall" placeholder="Period 1">
+                    <input class="inputPeriod" placeholder="Period 1">
                 </div>
 
                 <div id="periodDetails" class="period">

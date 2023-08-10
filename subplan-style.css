@@ -11,7 +11,8 @@ h1 {
 
 h2 {
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 15px;
+    align-self: center;
 }
 
 h3 {
@@ -33,38 +34,31 @@ input {
 
 
 button {
-    border-style: groove;
-    border-radius: 5px;
+    border-style: double;
+    border-radius: 4px;
     margin-bottom: 1px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #4682B4;
     color:#fff;
     font-size: 10px;
+    background: linear-gradient(to right, #d09591, #a0aebd);
 }
 
 .deleteButton {
-    border-style: double;
     border-radius: 2px;
     margin-bottom: 1px;
     margin-top: 2px;
-    font-size: 8px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#buttonDay {
-    border-style: double;
-    border-radius: 2px;
-    margin-bottom: 1px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 12px;
+  
 }
 
 #buttonPeriod, #buttonPeriodDelete {
-    border-style: double;
+   
     border-radius: 2px;
     margin-bottom: 1px;
-    font-size: 8px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    width: 80px;
+    align-self: center;
+    
 }
 
 #saveButton {
@@ -77,26 +71,29 @@ button {
 
 #hiddenButton6, #hiddenButton7, #hiddenButton8, #hiddenButton9, #hiddenButton10 {
     align-self: center;
+    
     margin-top: 5px;
     display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
   background-color: #fffff0;
-  color:#333;
-  font-weight: 500;
+  color:#fff;
+  font-weight: 400;
 }
 
 #unhideButton6, #unhideButton7, #unhideButton8, #unhideButton9, #unhideButton10 {
     align-self: center;
+   
     margin-top: 5px;
     display: flex;
   justify-content: center;
   align-items: center;
   display: none;
   background-color: #fffff0;
-  color:#333;
-  font-weight: 500;
+  color:#fff;
+  font-weight: 600;
+  font-size: 6px;
 }
 
 label {
@@ -120,8 +117,14 @@ label {
     overflow: hidden;
 }
 
+.inputPeriod {
+    width: 60px;
+    height: 10px;
+    align-self: center;
+}
+
 .inputsmall {
-    width: 50px;
+    width: 30px;
     height: 10px;
 }
 
@@ -202,27 +205,28 @@ label {
 #teacherName {
     background-color: #fff;
     height: 25px;
-    width: 380px;
+    width: 355px;
     border-radius: 3px;
     border: solid;
     padding: 3px;
 }
 
-#gradeLevel {
+.topOfPageGradeDate {
     background-color: #fff;
     height: 25px;
-    width: 100px;
+    width: 114px;
     border-radius: 3px;
     border: solid;
     padding: 3px;
 }
 
-#roomNum {
+.day {
     background-color: #fff;
     height: 25px;
     border-radius: 3px;
     border: solid;
     padding: 3px;
+    width: 70px;
 }
 
 #containerContacts {
@@ -236,7 +240,7 @@ label {
 #computerInfo {
     background-color: #fff;
     height: 100px;
-    width: 315px;
+    width: 355px;
     border-radius: 3px;
     border: solid;
 }
@@ -244,7 +248,7 @@ label {
 #helpfulContacts {
     background-color: #fff;
     height: 100px;
-    width: 315px;
+    width: 355px;
     border-radius: 3px;
     border: solid;
 }
@@ -416,7 +420,7 @@ label {
 #studentBehaviour {
     background-color: #fff;
     height: 100px;
-    width: 315px;
+    width: 330px;
     border-radius: 3px;
     border: solid;
 }
@@ -424,7 +428,7 @@ label {
 #emergProcedures {
     background-color: #fff;
     height: 100px;
-    width: 315px;
+    width: 330px;
     border-radius: 3px;
     border: solid;
 }
@@ -439,7 +443,7 @@ label {
 #notesExpectations {
     background-color: #fff;
     height: 100px;
-    width: 650px;
+    width: 680px;
     border-radius: 3px;
     border: solid;
 }
