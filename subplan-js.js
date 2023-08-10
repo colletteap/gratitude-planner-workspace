@@ -275,20 +275,26 @@ function drop_handler(seatingChart) {
   seatingChart.target.appendChild(document.getElementById(data));
 }
 
-// Add New Period Planner
+// Add Period Plan Button
 
-document.getElementById("addPeriodPlanBtn").addEventListener("click", function () {
-  const MAX_DUPLICATES = 10;
+document.addEventListener('DOMContentLoaded', function () {
+  const addPeriodPlanBtn = document.getElementById('addPeriodPlanBtn');
+  const containerPlan = document.querySelector('.containerPlan');
+  const parentPeriodDiv = document.getElementById('periodDiv');
+  let clonedPeriodCount = 0;
 
-  const period = document.getElementById("periodDiv");
-  const containerPlan = document.getElementById("containerPlan");
+  addPeriodPlanBtn.addEventListener('click', function () {
+    if (clonedPeriodCount < 5) {
+      const clonedPeriod = parentPeriodDiv.cloneNode(true);
 
-  if (containerPlan.children.length < MAX_DUPLICATES) {
-
-    const newperiod = period.cloneNode(true);
-
-    containerPlan.appendChild(newperiod);
-  }
-});
+    containerPlan.querySelectorAll('.periodDiv').forEach(periodDiv => {
+      periodDiv.appendChild(clonedPeriod.cloneNode(true));
+    });
+      clonedPeriodCount++;
+    } else {
+      alert('Seriously, if you have more than 10 periods.. your problem is bigger than needing a planner');
+    }
+    });
+  });
 
   //Saving to Local Storage
