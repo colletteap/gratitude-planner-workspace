@@ -184,7 +184,7 @@ label {
     overflow: hidden;
 }
 
-#textareaTime {
+.textareaTime {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 11px;
     border: none;
