@@ -39,16 +39,30 @@ document.addEventListener('DOMContentLoaded', function () {
     if (clonedPeriodCount < 5) {
       const clonedPeriod = periodDiv.cloneNode(true);
 
-    classScheduleContainer.querySelectorAll('.day-container').forEach(dayContainer => {
-      dayContainer.appendChild(clonedPeriod.cloneNode(true));
-    });
+      classScheduleContainer.querySelectorAll('.day-container').forEach(dayContainer => {
+        dayContainer.appendChild(clonedPeriod.cloneNode(true));
+      });
       clonedPeriodCount++;
     } else {
       alert('If you have more than 10 periods in a day, please see your administrator... something went wrong.');
     }
-    });
-
   });
+ const deletePeriodButton = document.getElementById('buttonPeriodDelete')
+ deletePeriodButton.addEventListener('click', function (){
+  const allDays = document.querySelectorAll('.day-container');
+  allDays.forEach ((elementEachDay)=> {
+    if (elementEachDay.childElementCount < 7) {
+      alert('Max number of periods deleted!');
+      return;
+    }
+  elementEachDay.lastElementChild.remove();
+  })
+ })
+});
+
+// Delete Period Button
+
+
 
 
 
@@ -56,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // Hiding Days - hiding day 6
 
 const hiddenButton6 = document.getElementById("hiddenButton6");
-        const classScheduleDay6 = document.getElementById("classScheduleDay6");
+const classScheduleDay6 = document.getElementById("classScheduleDay6");
 
-        // Add a click event listener to the button
-        hiddenButton6.addEventListener("click", function() {
-            
-            classScheduleDay6.style.display = "none";
-        });
+// Add a click event listener to the button
+hiddenButton6.addEventListener("click", function () {
+
+  classScheduleDay6.style.display = "none";
+});
 
 // Adding Unhide Button
 
@@ -82,13 +96,13 @@ unhideButton6.addEventListener("click", function () {
 // Hide/Unhide Day 7
 
 const hiddenButton7 = document.getElementById("hiddenButton7");
-        const classScheduleDay7 = document.getElementById("classScheduleDay7");
+const classScheduleDay7 = document.getElementById("classScheduleDay7");
 
-        // Add a click event listener to the button
-        hiddenButton7.addEventListener("click", function() {
-            
-            classScheduleDay7.style.display = "none";
-        });
+// Add a click event listener to the button
+hiddenButton7.addEventListener("click", function () {
+
+  classScheduleDay7.style.display = "none";
+});
 
 // Adding Unhide Button
 
@@ -108,13 +122,13 @@ unhideButton7.addEventListener("click", function () {
 // Hide/Unhide Day 8
 
 const hiddenButton8 = document.getElementById("hiddenButton8");
-        const classScheduleDay8 = document.getElementById("classScheduleDay8");
+const classScheduleDay8 = document.getElementById("classScheduleDay8");
 
-        // Add a click event listener to the button
-        hiddenButton8.addEventListener("click", function() {
-            
-            classScheduleDay8.style.display = "none";
-        });
+// Add a click event listener to the button
+hiddenButton8.addEventListener("click", function () {
+
+  classScheduleDay8.style.display = "none";
+});
 
 // Adding Unhide Button
 
@@ -134,13 +148,13 @@ unhideButton8.addEventListener("click", function () {
 // Hide/Unhide Day 9
 
 const hiddenButton9 = document.getElementById("hiddenButton9");
-        const classScheduleDay9 = document.getElementById("classScheduleDay9");
+const classScheduleDay9 = document.getElementById("classScheduleDay9");
 
-        // Add a click event listener to the button
-        hiddenButton9.addEventListener("click", function() {
-            
-            classScheduleDay9.style.display = "none";
-        });
+// Add a click event listener to the button
+hiddenButton9.addEventListener("click", function () {
+
+  classScheduleDay9.style.display = "none";
+});
 
 // Adding Unhide Button
 
@@ -160,13 +174,13 @@ unhideButton9.addEventListener("click", function () {
 // Hide/Unhide Day 10
 
 const hiddenButton10 = document.getElementById("hiddenButton10");
-        const classScheduleDay10 = document.getElementById("classScheduleDay10");
+const classScheduleDay10 = document.getElementById("classScheduleDay10");
 
-        // Add a click event listener to the button
-        hiddenButton10.addEventListener("click", function() {
-            
-            classScheduleDay10.style.display = "none";
-        });
+// Add a click event listener to the button
+hiddenButton10.addEventListener("click", function () {
+
+  classScheduleDay10.style.display = "none";
+});
 
 // Adding Unhide Button
 
@@ -220,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const maxSeats = 30;
   let seatCounter = 1;
 
-// Add Seat Button Code
+  // Add Seat Button Code
 
   addSeatBtn.addEventListener('click', function () {
     if (seatCounter >= maxSeats) return;
@@ -239,35 +253,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var draggables = document.getElementsByClassName("seat");
 
-      for (var i = 0; i < draggables.length; i++) {
-        draggables[i].addEventListener("dragstart", function (event) {
-          event.dataTransfer.setData("seat", event.target.id);
-        });
-      }
+for (var i = 0; i < draggables.length; i++) {
+  draggables[i].addEventListener("dragstart", function (event) {
+    event.dataTransfer.setData("seat", event.target.id);
+  });
+}
 
-      var droppables = document.getElementsByClassName("droppableSeatingChart");
+var droppables = document.getElementsByClassName("droppableSeatingChart");
 
-      for (var i = 0; i < droppables.length; i++) {
-        droppables[i].addEventListener("dragover", function (event) {
-          event.preventDefault();
-          event.target.classList.add("drag-over");
-        });
+for (var i = 0; i < droppables.length; i++) {
+  droppables[i].addEventListener("dragover", function (event) {
+    event.preventDefault();
+    event.target.classList.add("drag-over");
+  });
 
-        droppables[i].addEventListener("dragleave", function (event) {
-          event.target.classList.remove("drag-over");
-        });
+  droppables[i].addEventListener("dragleave", function (event) {
+    event.target.classList.remove("drag-over");
+  });
 
-        droppables[i].addEventListener("drop", function (event) {
-          var id = event.dataTransfer.getData("text");
-          var draggableElement = document.getElementById(id);
-          event.target.appendChild(draggableElement);
-          event.target.classList.remove("drag-over");
-          event.target.classList.add("dropped");
-          setTimeout(function () {
-            event.target.classList.remove("dropped");
-          }, 1000);
-        });
-      }
+  droppables[i].addEventListener("drop", function (event) {
+    var id = event.dataTransfer.getData("text");
+    var draggableElement = document.getElementById(id);
+    event.target.appendChild(draggableElement);
+    event.target.classList.remove("drag-over");
+    event.target.classList.add("dropped");
+    setTimeout(function () {
+      event.target.classList.remove("dropped");
+    }, 1000);
+  });
+}
 
 
 
@@ -301,14 +315,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (clonedPeriodCount < 5) {
       const clonedPeriod = parentPeriodDiv.cloneNode(true);
 
-    containerPlan.querySelectorAll('.periodDiv').forEach(periodDiv => {
-      periodDiv.appendChild(clonedPeriod.cloneNode(true));
-    });
+      containerPlan.appendChild(clonedPeriod);
       clonedPeriodCount++;
     } else {
       alert('Seriously, if you have more than 10 periods.. your problem is bigger than needing a planner');
     }
-    });
   });
+});
 
   //Saving to Local Storage
