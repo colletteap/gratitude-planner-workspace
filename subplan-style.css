@@ -668,3 +668,12 @@ padding-bottom: 0px;
     border-radius: 2px;
 }
 
+.saveButtonContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin-left: 600px;
+}
+
