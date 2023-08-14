@@ -569,14 +569,17 @@ height: auto;
 .seat {
   width: 70px;
   height: 40px;
-  border: 1px solid #333;
+  border: 10px solid #333;
+  border-radius: 2px;
   background-color: #fff;
   text-align: center;
   margin-left: 5px;
+  position: absolute;
 }
 
 #seat {
-    background-color: #a0aebd;
+    background-color: #333;
+    position: absolute;
 }
 
 .seatName {

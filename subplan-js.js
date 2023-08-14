@@ -240,8 +240,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (seatCounter >= maxSeats) return;
     const newSeat = document.createElement('div');
     newSeat.className = 'seat';
-    newSeat.id = 'seat'
-    newSeat.style.cursor = "move"
+    newSeat.id = 'seat';
+    newSeat.style.cursor = "move";
     newSeat.draggable = true;
     newSeat.innerHTML = '<textarea class="seatName" placeholder="Enter name"></textarea>';
     seatingChart.appendChild(newSeat);
@@ -251,57 +251,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // dragging and dropping
 
-var draggables = document.getElementsByClassName("seat");
+// Ensure the element exists in the HTML
+const seat = document.getElementById('seat');
 
-for (var i = 0; i < draggables.length; i++) {
-  draggables[i].addEventListener("dragstart", function (event) {
-    event.dataTransfer.setData("seat", event.target.id);
-  });
+// Check if the element exists before adding event listeners
+if (seat) {
+  seat.addEventListener('mousedown', mousedown);
 }
 
-var droppables = document.getElementsByClassName("droppableSeatingChart");
+function mousedown(e) {
+  // Prevent default action to prevent unwanted text selection
+  e.preventDefault();
 
-for (var i = 0; i < droppables.length; i++) {
-  droppables[i].addEventListener("dragover", function (event) {
-    event.preventDefault();
-    event.target.classList.add("drag-over");
-  });
+  // Set the initial position of the seat element to absolute
+  seat.style.position = 'fixed';
+  seat.style.cursor = 'move';
 
-  droppables[i].addEventListener("dragleave", function (event) {
-    event.target.classList.remove("drag-over");
-  });
+  // Change the background color
+  seat.style.background = 'black';
 
-  droppables[i].addEventListener("drop", function (event) {
-    var id = event.dataTransfer.getData("text");
-    var draggableElement = document.getElementById(id);
-    event.target.appendChild(draggableElement);
-    event.target.classList.remove("drag-over");
-    event.target.classList.add("dropped");
-    setTimeout(function () {
-      event.target.classList.remove("dropped");
-    }, 1000);
-  });
+  // Add event listeners to document to handle mousemove and mouseup globally
+  document.addEventListener('mousemove', mousemove);
+  document.addEventListener('mouseup', mouseup);
+
+  // Initial position of the seat
+  const initialX = e.clientX;
+  const initialY = e.clientY;
+
+  function mousemove(e) {
+    var deltaX = e.clientX - initialX;
+    var deltaY = e.clientY - initialY;
+    seat.style.left = deltaX + 'px';
+    seat.style.top = deltaY + 'px';
+  }
+
+  function mouseup() {
+    // Remove event listeners when mouse is released
+    document.removeEventListener('mousemove', mousemove);
+    document.removeEventListener('mouseup', mouseup);
+
+    // Reset background color
+    seat.style.background = 'orange';
+  }
 }
 
-
-
-// trying new code to get drag to work
-
-function dragstart_handler(seatingChart) {
-
-  seatingChart.dataTransfer.setData("seat", ev.target.id);
-  seatingChart.dataTransfer.effectAllowed = "move";
-}
-function dragover_handler(seatingChart) {
-  seatingChart.preventDefault();
-  seatingChart.dataTransfer.dropEffect = "move";
-}
-function drop_handler(seatingChart) {
-  seatingChart.preventDefault();
-
-  const data = seatingChart.dataTransfer.getData("seat");
-  seatingChart.target.appendChild(document.getElementById(data));
-}
 
 // Add Period Plan Button
 
