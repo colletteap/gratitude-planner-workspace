@@ -564,6 +564,8 @@ height: auto;
     height: 35px;
     width: 80px;
     margin-top: 5px;
+    position: absolute;
+    cursor: move;
 }
 
 .seat {
@@ -575,11 +577,13 @@ height: auto;
   text-align: center;
   margin-left: 5px;
   position: absolute;
+  cursor: move;
 }
 
 #seat {
     background-color: #333;
     position: absolute;
+    cursor: move;
 }
 
 .seatName {

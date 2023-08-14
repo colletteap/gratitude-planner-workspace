@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('If you have more than 10 periods in a day, please see your administrator... something went wrong.');
     }
   });
+
+  // Delete Period Button
+  
  const deletePeriodButton = document.getElementById('buttonPeriodDelete')
  deletePeriodButton.addEventListener('click', function (){
   const allDays = document.querySelectorAll('.day-container');
@@ -60,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
  })
 });
 
-// Delete Period Button
 
 
 
@@ -250,51 +252,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // dragging and dropping
+var isDragging = false;
+var dragOffsetX = 0;
+var dragOffsetY = 0;
 
-// Ensure the element exists in the HTML
-const seat = document.getElementById('seat');
+var draggableSeat = document.getElementById("addSeatBtn");
 
-// Check if the element exists before adding event listeners
-if (seat) {
-  seat.addEventListener('mousedown', mousedown);
+// Function to start dragging
+function startDrag(e) {
+  isDragging = true;
+  var rect = draggableSeat.getBoundingClientRect();
+  dragOffsetX = e.clientX - rect.left;
+  dragOffsetY = e.clientY - rect.top;
 }
 
-function mousedown(e) {
-  // Prevent default action to prevent unwanted text selection
-  e.preventDefault();
-
-  // Set the initial position of the seat element to absolute
-  seat.style.position = 'fixed';
-  seat.style.cursor = 'move';
-
-  // Change the background color
-  seat.style.background = 'black';
-
-  // Add event listeners to document to handle mousemove and mouseup globally
-  document.addEventListener('mousemove', mousemove);
-  document.addEventListener('mouseup', mouseup);
-
-  // Initial position of the seat
-  const initialX = e.clientX;
-  const initialY = e.clientY;
-
-  function mousemove(e) {
-    var deltaX = e.clientX - initialX;
-    var deltaY = e.clientY - initialY;
-    seat.style.left = deltaX + 'px';
-    seat.style.top = deltaY + 'px';
-  }
-
-  function mouseup() {
-    // Remove event listeners when mouse is released
-    document.removeEventListener('mousemove', mousemove);
-    document.removeEventListener('mouseup', mouseup);
-
-    // Reset background color
-    seat.style.background = 'orange';
-  }
+// Function to stop dragging
+function stopDrag() {
+  isDragging = false;
 }
 
+// Function to move the div
+function drag(e) {
+  if (!isDragging) return;
+  draggableSeat.style.left = (e.clientX - dragOffsetX) + "px";
+  draggableSeat.style.top = (e.clientY - dragOffsetY) + "px";
+}
+
+// Attach event listeners
+draggableSeat.addEventListener("mousedown", startDrag);
+document.addEventListener("mouseup", stopDrag);
+document.addEventListener("mousemove", drag);
 
 // Add Period Plan Button
 
