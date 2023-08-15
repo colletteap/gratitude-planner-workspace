@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
   addPeriodButton.addEventListener('click', function () {
     if (clonedPeriodCount < 5) {
       const clonedPeriod = periodDiv.cloneNode(true);
+      clonedPeriod.className = 'inputField savedPeriodDiv';
 
       classScheduleContainer.querySelectorAll('.day-container').forEach(dayContainer => {
         dayContainer.appendChild(clonedPeriod.cloneNode(true));
@@ -70,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('If you have more than 10 periods in a day, please see your administrator... something went wrong.');
     }
   });
+
+  // Write code to save clonedPeriod div into local storage once created
 
   // Delete Period Button
 
@@ -234,7 +237,7 @@ for (let i = 1; i <= 30; i++) {
   const textarea = document.createElement('textarea');
   textarea.id = `student-name-${i}`;
   textarea.placeholder = `Student ${i} Name`;
-  textarea.className = 'student-name';
+  textarea.className = 'student-name inputField';
   studentNamesDiv.appendChild(textarea);
 }
 
@@ -247,7 +250,7 @@ for (let i = 1; i <= 30; i++) {
   const textarea = document.createElement('textarea');
   textarea.id = `student-note-${i}`;
   textarea.placeholder = `Student ${i} Notes`;
-  textarea.className = 'student-notes';
+  textarea.className = 'student-notes inputField';
   studentNotesDiv.appendChild(textarea);
 }
 
