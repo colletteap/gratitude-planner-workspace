@@ -1,0 +1,66 @@
+
+#containerSeating {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#seatingChart {
+    width: 700px;
+  height: 500px;
+  border-radius: 2px;
+  border: 2px solid black;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+}
+
+.droppableSeatingChart {
+    width: 650px;
+  height: 450px;
+  background-color: #f9f9f9;
+}
+
+.droppableSeatingChart.drag-over {
+    background-color: #d09591;
+}
+
+.droppableSeatingChart.dropped {
+    background-color: #778899;
+}
+
+#addSeatBtn {
+    height: 35px;
+    width: 80px;
+    margin-top: 5px;
+    position: absolute;
+    cursor: move;
+}
+
+.seat {
+  width: 70px;
+  height: 40px;
+  border: 10px solid #333;
+  border-radius: 2px;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 5px;
+  position: absolute;
+  cursor: move;
+}
+
+#seat {
+    background-color: #333;
+    position: absolute;
+    cursor: move;
+}
+
+.seatName {
+  width: 60px;
+  height: 30px;
+  border: none;
+  font-size: 10px;
+  text-align: center;
+}
