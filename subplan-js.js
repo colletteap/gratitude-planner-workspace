@@ -8,23 +8,46 @@
 
 //Saving to Local Storage
 
-const inputsAndTextareas = document.querySelectorAll('input, textarea');
+const inputFields = document.querySelectorAll('.inputField');
 
-inputsAndTextareas.forEach((element, index) => {
-  element.value = localStorage.getItem(`savedData_${index}`);
+function saveToLocalStorage() {
+
+  const inputFieldValues = {};
+
+  inputFields.forEach((inputField, index) => {
+    inputFieldValues[`field_${index}`] = inputField.value;
+  });
+
+  localStorage.setItem('inputFieldData', JSON.stringify(inputFieldValues));
+}
+
+function loadFromLocalStorage() {
+  const savedData = localStorage.getItem('inputFieldData');
+
+  if (savedData) {
+    const parsedData = JSON.parse(savedData);
+    inputFields.forEach((inputField, index) => {
+      if (parsedData[`field_${index}`]) {
+        inputField.value = parsedData[`field_${index}`];
+      }
+    });
+  }
+}
+
+loadFromLocalStorage();
+
+inputFields.forEach(inputField => {
+  inputField.addEventListener('input', saveToLocalStorage);
 });
 
-const saveButton = document.getElementById('saveButton');
-if (saveButton) {
-  saveButton.addEventListener('click', () => saveData(inputsAndTextareas));
+
+// Alert on Teacher Name Input
+
+function onPageContentLoaded() {
+  alert('Check out the bottom of the page for a Save All button ---------- Screenshot this is you are mobile to send to your sub ------------------ If on a desktop, print as a PDF to save and send to your sub');
 }
 
-function saveData(elements) {
-  elements.forEach((element, index) => {
-    localStorage.setItem(`savedData_${index}`, element.value);
-  });
-}
-
+document.addEventListener('DOMContentLoaded', onPageContentLoaded);
 
 
 // Add Period Button
@@ -50,17 +73,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Delete Period Button
 
- const deletePeriodButton = document.getElementById('buttonPeriodDelete')
- deletePeriodButton.addEventListener('click', function (){
-  const allDays = document.querySelectorAll('.day-container');
-  allDays.forEach ((elementEachDay)=> {
-    if (elementEachDay.childElementCount < 7) {
-      alert('Max number of periods deleted!');
-      return;
-    }
-  elementEachDay.lastElementChild.remove();
+  const deletePeriodButton = document.getElementById('buttonPeriodDelete')
+  deletePeriodButton.addEventListener('click', function () {
+    const allDays = document.querySelectorAll('.day-container');
+    allDays.forEach((elementEachDay) => {
+      if (elementEachDay.childElementCount < 7) {
+        alert('Max number of periods deleted!');
+        return;
+      }
+      elementEachDay.lastElementChild.remove();
+    })
   })
- })
 });
 
 

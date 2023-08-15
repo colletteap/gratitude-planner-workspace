@@ -101,7 +101,7 @@ label {
     text-decoration: underline;
 }
 
-#inputteach {
+#inputTeach {
     font-size: 11px;
     width: 240px;
 }
@@ -127,6 +127,10 @@ label {
 .inputsmall {
     width: 30px;
     height: 10px;
+}
+
+.inputField {
+    cursor:alias;
 }
 
 #textarealg {
@@ -167,7 +171,7 @@ label {
     font-size: 11px;
     border: none;
     width: 215px;
-    height: 70px;
+    height: 90px;
     color: #778899;
     resize: none;
     overflow: hidden;
@@ -178,7 +182,7 @@ label {
     font-size: 11px;
     border: none;
     width: 295px;
-    height: 70px;
+    height: 90px;
     color: #778899;
     resize: none;
     overflow: hidden;
@@ -548,6 +552,7 @@ height: auto;
     align-self: center;
     background-color: #fff;
     width: 650px;
+    height: 150px;
     margin: 0px;
     padding: 0px;
     justify-content: space-between;
