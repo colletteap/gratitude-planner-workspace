@@ -44,7 +44,7 @@ inputFields.forEach(inputField => {
 // Alert on Teacher Name Input
 
 function onPageContentLoaded() {
-  alert('Check out the bottom of the page for a Save All button ---------- Screenshot this is you are mobile to send to your sub ------------------ If on a desktop, print as a PDF to save and send to your sub');
+  alert('Input is saved upon entry ---------- Screenshot this is you are mobile to send to your sub ------------------ If on a desktop, print as a PDF to save and send to your sub');
 }
 
 document.addEventListener('DOMContentLoaded', onPageContentLoaded);
