@@ -404,6 +404,10 @@ label {
     align-content: center;
 }
 
+.savedPeriodDiv {
+    cursor:alias;
+}
+
 .bottomMargin {
     margin-bottom: 30px;
 }
