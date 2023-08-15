@@ -612,13 +612,3 @@ padding-bottom: 0px;
 .resourcesNeeded {
     width: 220px;
 }
-
-.saveButtonContainer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    margin-left: 600px;
-}
-
