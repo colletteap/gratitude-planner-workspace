@@ -235,9 +235,9 @@ const studentNamesDiv = document.getElementById('studentNames');
 
 for (let i = 1; i <= 30; i++) {
   const textarea = document.createElement('textarea');
-  textarea.id = `student-name-${i}`;
+  textarea.id = 'eachStudentName';
   textarea.placeholder = `Student ${i} Name`;
-  textarea.className = 'student-name inputField';
+  textarea.className = 'inputField';
   studentNamesDiv.appendChild(textarea);
 }
 
@@ -248,9 +248,9 @@ const studentNotesDiv = document.getElementById('studentNotes');
 
 for (let i = 1; i <= 30; i++) {
   const textarea = document.createElement('textarea');
-  textarea.id = `student-note-${i}`;
+  textarea.id = 'eachStudentNotes';
   textarea.placeholder = `Student ${i} Notes`;
-  textarea.className = 'student-notes inputField';
+  textarea.className = 'inputField';
   studentNotesDiv.appendChild(textarea);
 }
 
