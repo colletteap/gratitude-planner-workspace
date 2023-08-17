@@ -1,0 +1,60 @@
+.calendar {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    height: 600px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d18d69;
+    color: white;
+    padding: 10px;
+    width: 800px;
+  }
+  
+  button {
+    background-color: #586959;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+    height: 600px;
+    width: 800px;
+  }
+  
+  .day {
+    border: 1px solid;
+    padding: 5px;
+    text-align: center;
+    background-color: #ebccbd;
+  }
+
+  .calendarToDoContainer, .calendarSpecialEventsContainer, .calendarNotesContainer {
+    width: auto;
+    height: auto;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .calendarToDoInput, .calendarSpecialEventsInput, .calendarNotesInput {
+    overflow: hidden;
+    resize: none;
+    border: 1px solid white;
+    background-color: #ebccbd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    width: auto;
+    height: auto;
+  }
+
+
+  
