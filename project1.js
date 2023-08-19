@@ -79,9 +79,27 @@ function displayJournalPrompt() {
 // document.addEventListener("click", displayJournalPrompt)
 
 // Hide/Show Journal and Core Values Div
+document.getElementById("journal").addEventListener("click", () => {
+  document.getElementById("monthlyCalendarDiv").hidden = true;
+  document.getElementById("mycorevalues").hidden = true;
+  document.getElementById("myJournal").hidden = false;
+});
+
+document.getElementById("calendar").addEventListener("click", () => {
+  document.getElementById("monthlyCalendarDiv").hidden = false;
+  document.getElementById("mycorevalues").hidden = true;
+  document.getElementById("myJournal").hidden = true;
+});
+
+document.getElementById("core-values").addEventListener("click", () => {
+  document.getElementById("monthlyCalendarDiv").hidden = true;
+  document.getElementById("mycorevalues").hidden = false;
+  document.getElementById("myJournal").hidden = true;
+});
+
 function showDivById(divId) {
   const divToShow = document.getElementById(divId);
-  divToShow.style.display = 'flex';
+  // divToShow.style.display = 'flex';
   divToShow.classList.remove('hidden-div')
   divToShow.scrollIntoView({ behavior: 'smooth' });
 }
