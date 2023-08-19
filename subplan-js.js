@@ -11,7 +11,7 @@
 const inputFields = document.querySelectorAll('.inputField');
 
 function saveToLocalStorage() {
-
+  const inputFields = document.querySelectorAll('.inputField');
   const inputFieldValues = {};
 
   inputFields.forEach((inputField, index) => {
