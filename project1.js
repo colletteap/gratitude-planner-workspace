@@ -262,8 +262,10 @@ nextMonthButton.addEventListener("click", () => {
 //Automatically update the div up top with sections of To-Do and Special Events
 
 function updateOutput() {
-  const calendarToDoInput = document.getElementById("textInput");
-  const toDoSnippet = document.getElementById("outputText");
+  const calendarToDoInput = document.querySelector("calendarToDoInput");
+  const toDoSnippet = document.getElementById("toDoUpdate");
   
   toDoSnippet.textContent = calendarToDoInput.value;
 };
+
+// need to make unique ids for calendar textareas ??
