@@ -435,10 +435,12 @@ textarea {
   height: 225px;
 }
 
-.itemstdlist {
+#toDoUpdate {
   flex-grow: 2;
   height: 150px;
   width: 60px;
+  color: black;
+  font-size: 12px;
   text-overflow: ellipsis;
 }
 
@@ -489,8 +491,8 @@ button {
 }
 
 .calendarToDoContainer, .calendarSpecialEventsContainer, .calendarNotesContainer {
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 50px;
   color: black;
   text-decoration: underline;
 }
@@ -502,8 +504,8 @@ button {
   background-color: #ebccbd;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 8px;
-  width: flex;
-  height: flex;
+  width: 85px;
+  height: 40px;
 }
 
 
