@@ -167,6 +167,10 @@ p {
   margin-bottom: 130px;
 }
 
+.extraLeftPlus {
+  padding-left: 70px;
+}
+
 #plus1 {
   font-size: 25px;
   text-align: right;
@@ -397,6 +401,18 @@ textarea {
   border-radius: 5px;
   display: inline-block;
   background-color: #fff;
+}
+
+.coreValuesInstructions {
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .todohome {

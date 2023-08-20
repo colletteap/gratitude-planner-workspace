@@ -69,13 +69,13 @@
             <!-- this showDiv was duplicating a javascript event listener you also have -->
             <div id="journal" class="card hide-div">
                 <p>Journal it out</p>
-                <div id="plus">
+                <div id="plus" class="extraLeftPlus">
                     <p><strong>+</strong></p>
                 </div>
             </div>
             <div id="core-values" class="card hide-div">
                 <p>Core Values</p>
-                <div id="plus">
+                <div id="plus" class="extraLeftPlus">
                     <p><strong>+</strong></p>
                 </div>
             </div>
@@ -90,7 +90,7 @@
             </div>
 
             <div id="self-care" class="card">
-                <p>Self-Care Resources</p>
+                <p>Self-Care Resources&nbsp;&nbsp;</p>
                 <div id="plus1">
                     <p><strong>+</strong></p>
                 </div>
@@ -109,22 +109,18 @@
     <div id="myJournal" class="hidden-div">
         <div id="padding-journal">
             <div id="journal-heading">
-                <strong>Journal it Out</strong>
+                <strong style="color: white">Journal it Out</strong>
             </div>
             <div id="journal1">
                 <div id="prompts" onclick="displayJournalPrompt()">
-                    <!-- 
-                        I think this text/clickable area is lost in the mix - I only noticed it because I saw there was an onclick function
-                        Maybe an icon or something could help? this is from https://boxicons.com/
-                    -->
                     <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABDlJREFUaEPtmFnIVVUUx3+fPiSYpiiU6IOVM5HiVFYkJg45PEiaFqLgLBgOlfQQDRrYQ+KIYDn7oIaIigOOaKYmqZXNAxEk4kNCVuiDOPCHc2R9u33O2efce7/PT+6CC/fsvdY6a+3/mvapoYFTTQO3n6oD9Y1gFYEKIPA6sAa4GqL7XkNgBTALOAIMAW5mOXGvOCA7VgNTjcHLgdmVcGA08CLQGXgiesF3wE/AHmBn1ksT9vcCw5y9/sBnafryINAK2AE8n2HgQeDl0Bg2uloA54FHzdpZoE85HHgIOAc8Hni6QuQp4Fogf8zWG/jSkRkLfJqkJxSBfVHY5LFnHTA5RUDJqlP/wOHZDIw3ayfSUA9xQHGp+LT0OfA+IIhFgnkB8LTDp/WYx269BSyKFoYCB8xmO+BPR48c9ZbVEAcU96OMwh+i5L3tvKQx8KsTwyuB1xw+VZalZu1b4EmH5wzQ16yNA7b50Axx4DLwsBF+KUpmn74JwEaz8Q3Qw2FUbpwCGpn1EQ7K7wLvmX01Nlti726FOOCedGvgSkJstwUumj3BLvhd+gSYYhbXA5PM80DgsHnW/0FFEfgPaGqE2wBCxUfau2Q2JNvMw6hcOW3Wvzc9RctdAYVqTD8C3Yo68AvQMTCEVP9trKq5yRiXVJb/Nov639I8y+l/ApAMug9sACYaZb6k07aSWAZ3MLwKlWkeBx4E/k1BynVAvM2LIqDOe9wRVhl9J+qcyiOVy4VR87KsChVVFJeUyF+YxZ+BLua5E6C1mJKQDEJASrYC6oh5aK2TqFZWezZpNzkovxBNpLHMUUCJ/T8KqUISEqQaJWwupDmj8vlMwiih9ZOO8HBA3T4mofm2eU48jFAHpEvD3C7g2QwY9gNqPDYJrcg8YLFZ8PUKVSCb/K9EUVAYASs4xhmnbwAqc/pplLYnmeSrHSUUGgqRmHwDXUmjRJ64z8M7F3gA+NAR0jhum5buA7oXeClPCOUxriivDD3mCAvx7eVw4FVAk2N3oL2nLmts+AP4GlAeeIevFM/UyC4AmkZjUqntl3YaIQjo+rgqMjrPyf4GzHDKYZq8nNYBWZLxtl/kTmJNhJoMi9ItYL5TdXy6fJf6j4A3s16choAuLOq25aA5wLIARfazymBAB5BKSQ6MBHZ7JHVBWQL8nqD1MeANYKZn/zlPA/Op0al/HPpRwOeAuq4m0EeMdl3xdCKaSUJIn1sOOTrceSdETyaPzwGdnpLWUk/gq0xttRl8Q6CupkW/G3lf73PA/cDku9eG+rIlGitifoXG9FDhED6fAwoXW4sVDroxFaEBzpigD1e9iihKkvE5cB1oYgR0UcmsBgkv0AD4l9lzb14l++JzwL3EhzS7NEPKra/Wu+5LB0qGtS4VlBoedWlrcBmtd6PyGFBFIM9pVYK3ikAlTjWPzioCeU6rErwNHoE7F7a3Mc1luKoAAAAASUVORK5CYII=" />
-                    Click here for prompts
+                        src="images/clickhere.png" width="55px" height="50px"/>
+                    Click here for journal prompts
                 </div>
                 <!-- change to textarea for better handling of wrapping text and newlines -->
                 <textarea placeholder="Your thoughts.." id="input"></textarea>
             </div>
-            <div style="margin: 20px;">
+            <div style="margin-left: 350px;">
                 <button id="saveButton">Save</button>
             </div>
         </div>
@@ -133,6 +129,9 @@
     <div id="mycorevalues" class="hidden-div">
         <div id="padding-core-values">
             <h1 id="h1cv">Core Values</h1>
+            <div class="coreValuesInstructions">
+                Click on words below to populate your 6 Core Values, you can deselect them by clicking on them again if you decide your values have changed
+            </div>
             <div class="wordbank" class="column-wrapper">
                 <div class="word">Accountability</div>
                 <div class="word">Adventure</div>
