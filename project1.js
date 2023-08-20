@@ -260,3 +260,10 @@ nextMonthButton.addEventListener("click", () => {
 // Local Storage for input on each day with class=day
 
 //Automatically update the div up top with sections of To-Do and Special Events
+
+function updateOutput() {
+  const calendarToDoInput = document.getElementById("textInput");
+  const toDoSnippet = document.getElementById("outputText");
+  
+  toDoSnippet.textContent = calendarToDoInput.value;
+};
