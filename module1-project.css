@@ -33,10 +33,6 @@ li {
   gap: 1rem;
 }
 
-.hide-div {
-  padding: 1px;
-}
-
 #randomPhrase {
   font-size: 1.5em;
   text-transform: uppercase;
@@ -426,10 +422,12 @@ textarea {
   height: 225px;
 }
 
-.itemsplist {
+#specialDaysUpdate {
   flex-grow: 2;
   height: 150px;
   width: 60px;
+  color: black;
+  font-size: 12px;
 }
 
 .specialdayshome {
