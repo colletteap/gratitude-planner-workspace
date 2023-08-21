@@ -3,6 +3,23 @@ body {
   padding-top: 2rem;
 }
 
+
+p {
+  text-transform: capitalize;
+  color: white;
+}
+
+textarea {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+  background-color: #586959;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
 li {
   font-size: 12px;
 }
@@ -26,7 +43,7 @@ li {
   margin-top: 10px;
 }
 
-#container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -54,18 +71,7 @@ li {
   color: #686868;
 }
 
-#savedText {
-  height: 40px;
-  margin-right: 5px;
-  padding-right: 5px;
-  border-radius: 5px;
-  border-width: 1px;
-  color: #586959;
-  border: solid #000000;
-}
-
-
-#container1 {
+.containerColumn1 {
   display: flex;
   flex-direction: column;
   flex-flow: column-wrap;
@@ -75,7 +81,7 @@ li {
   row-gap: 20px;
 }
 
-#container2 {
+.containerColumn2 {
   display: flex;
   flex-direction: column;
   flex-flow: column-wrap;
@@ -85,7 +91,7 @@ li {
   row-gap: 20px;
 }
 
-#container3 {
+.containerColumn3 {
   display: flex;
   flex-direction: column;
   flex-flow: column-wrap;
@@ -95,7 +101,7 @@ li {
   row-gap: 20px;
 }
 
-#container4 {
+.containerColumn4 {
   display: flex;
   flex-direction: column;
   flex-flow: column-wrap;
@@ -103,12 +109,6 @@ li {
   align-items: flex-start;
   column-gap: 20px;
   row-gap: 20px;
-}
-
-
-p {
-  text-transform: capitalize;
-  color: white;
 }
 
 .card {
@@ -127,13 +127,13 @@ p {
   padding-left: 10px;
 }
 
-#mygreatday {
+.myGreatDay {
   background-color: #fab69d;
   height: 110px;
 }
 
 
-#specialdays {
+.specialDays {
   background-color: #9f5f67;
   height: 225px;
 }
@@ -143,27 +143,21 @@ p {
   height: 225px;
 }
 
-#plus-img {
-  width: 50%;
-  height: 50%;
-  margin-top: -2rem;
-}
-
-#arrow-img {
+.arrowImg {
   width: 25px;
   height: 25px;
   margin-left: 50px;
   margin-bottom: 160px;
 }
 
-#plus {
+.playButton {
   font-size: 25px;
   text-align: right;
   margin-left: 50px;
   margin-bottom: 130px;
 }
 
-.extraLeftPlus {
+.extraLeftPlayButton {
   padding-left: 70px;
 }
 
@@ -193,22 +187,22 @@ p {
   height: 340px;
 }
 
-#to-do {
+.toDoCard {
   background-color: #ebccbd;
   height: 225px;
 }
 
-#core-values {
+.coreValuesCard {
   background-color: #9f5f67;
   height: 225px;
 }
 
-#self-care {
+.selfCareCard {
   background-color: #586959;
   height: 193px;
 }
 
-#substitute {
+.substituteCard {
   background-color: #fab69d;
   height: 153px;
 }
@@ -360,10 +354,6 @@ p {
   padding-bottom: 350px;
 }
 
-textarea {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 #cvButton {
   background: #aaa;
   color: #000000;
@@ -417,17 +407,18 @@ textarea {
   margin-bottom: 5px;
 }
 
-.todohome {
+.toDoHome {
   flex-flow: column wrap;
   height: 225px;
 }
 
-.specialdayshome {
+.specialDaysHome {
   flex-flow: column wrap;
   height: 225px;
 }
 
-#toDoUpdate, #specialDaysUpdate {
+#toDoUpdate,
+#specialDaysUpdate {
   flex-grow: 2;
   height: 150px;
   width: 155px;
@@ -461,13 +452,6 @@ textarea {
   width: 800px;
 }
 
-button {
-  background-color: #586959;
-  color: white;
-  border: 1px solid white;
-  cursor: pointer;
-}
-
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -484,14 +468,18 @@ button {
   background-color: #ebccbd;
 }
 
-.calendarToDoContainer, .calendarSpecialEventsContainer, .calendarNotesContainer {
+.calendarToDoContainer,
+.calendarSpecialEventsContainer,
+.calendarNotesContainer {
   width: 100px;
   height: 50px;
   color: black;
   text-decoration: underline;
 }
 
-.calendarToDoInput, .calendarSpecialEventsInput, .calendarNotesInput {
+.calendarToDoInput,
+.calendarSpecialEventsInput,
+.calendarNotesInput {
   overflow: hidden;
   resize: none;
   border: 1px solid white;
@@ -501,6 +489,3 @@ button {
   width: 85px;
   height: 40px;
 }
-
-
-

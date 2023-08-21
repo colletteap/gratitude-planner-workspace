@@ -1,134 +1,217 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <title>Customized Planner</title>
+   
+    <title>Customized Teacher Planner</title>
+    
     <link rel="stylesheet" type="text/css" href="module1-project.css" />
+
 </head>
 
 <body>
+   
     <div>
-        <h1 id="randomPhrase">bu</h1>
+       
+        <h1 id="randomPhrase"></h1>
+    
     </div>
-    <div id="container">
+    
+    <div class="container">
 
-        <div id="container1">
+        <div class="containerColumn1">
 
-            <div id="mygreatday" class="card">
+            <div class="card myGreatDay">
+              
                 <p><strong>My</strong> Great Day</p>
+           
             </div>
 
             <div id="calendar" class="card">
+              
                 <p>Monthly Calendar</p>
-                <div id="arrow-img">
+               
+                <div class="arrowImg">
+                 
                     <img src="images/arrow.png" alt="arrow">
+                
                 </div>
+            
             </div>
+       
         </div>
 
-        <div id="container2">
-            <div id="specialdays" class="card">
-                <div class="specialdayshome">
+        <div class="containerColumn2">
+            
+            <div class="card specialDays">
+              
+                <div class="specialDaysHome">
+                   
                     <div id="specialDaysSnippet">
 
                         <p id="specialDaysUpdate">
-                                my birthday
+                            my birthday
                         </p>
+                   
                     </div>
+                  
                     <p>Special Days</p>
+               
                 </div>
-                <div id="plus">
+               
+                <div class="playButton">
+                  
                     <img src="images/pressplay.png" width="20px" height="20px">
+               
                 </div>
 
             </div>
-            <div id="to-do" class="card">
-                <div class="todohome">
+           
+            <div id="toDoCard" class="card">
+               
+                <div class="toDoHome">
+                  
                     <div id="toDoSnippet">
+                       
                         <p id="toDoUpdate">
-
-                           
-                                decorate classroom for easter
-                           
-
+                            decorate classroom for easter
                         </p>
+                    
                     </div>
+                   
                     <p>The To Do's</p>
+               
                 </div>
-                <div id="plus">
+               
+                <div class="playButton">
+                 
                     <img src="images/pressplay.png" width="20px" height="20px">
+                
                 </div>
+           
             </div>
+       
         </div>
 
-        <div id="container3">
-            <!-- this showDiv was duplicating a javascript event listener you also have -->
+        <div class="containerColumn3">
+        
             <div id="journal" class="card">
+              
                 <p>Journal it out</p>
-                <div id="plus" class="extraLeftPlus">
+               
+                <div class="playButton extraLeftPlayButton">
+                   
                     <img src="images/pressplay.png" width="20px" height="20px">
+               
                 </div>
+            
             </div>
-            <div id="core-values" class="card">
+            
+            <div class=" coreValuesCard card">
+               
                 <p>Core Values</p>
-                <div id="plus" class="extraLeftPlus">
+               
+                <div class="playButton extraLeftPlayButton">
+                  
                     <img src="images/pressplay.png" width="20px" height="20px">
+                
                 </div>
+           
             </div>
+        
         </div>
 
-        <div id="container4">
+        <div class="containerColumn4">
+           
             <div id="button" class="card">
+               
                 <p onclick="summerCountdown()">Summer Countdown</p>
+               
                 <div class="playSummerCountdown">
+                  
                     <img src="images/pressplay.png" width="20px" height="20px">
+               
                 </div>
+           
             </div>
 
-            <div id="self-care" class="card">
+            <div class="selfCareCard card">
+              
                 <p>Self-Care Resources&nbsp;&nbsp;</p>
-                <div id="plus">
+               
+                <div class="playButton">
+                  
                     <img src="images/pressplay.png" width="20px" height="20px">
+               
                 </div>
+           
             </div>
 
-            <div id="substitute" class="card">
+            <div class=" substituteCard card">
+               
                 <p>Customized Sub Plan</p>
+                
                 <div class="playSubPlan">
+                  
                     <img src="images/pressplay.png" width="20px" height="20px">
+               
                 </div>
+           
             </div>
+       
         </div>
+    
     </div>
 
 
     <div id="myJournal" class="hidden-div">
+       
         <div id="padding-journal">
+           
             <div id="journal-heading">
+                
                 <strong style="color: white">Journal it Out</strong>
+            
             </div>
+           
             <div id="journal1">
+               
                 <div id="prompts" onclick="displayJournalPrompt()">
-                    <img
-                        src="images/clickhere.png" width="55px" height="50px"/>
+                  
+                    <img src="images/clickhere.png" width="55px" height="50px" />
                     Click here for journal prompts
+               
                 </div>
-                <!-- change to textarea for better handling of wrapping text and newlines -->
+             
                 <textarea placeholder="Your thoughts.." id="input"></textarea>
+           
             </div>
+           
             <div style="margin-left: 350px;">
+              
                 <button id="saveButton">Save</button>
+           
             </div>
+      
         </div>
+   
     </div>
 
     <div id="mycorevalues" class="hidden-div">
+        
         <div id="padding-core-values">
+           
             <h1 id="h1cv">Core Values</h1>
+           
             <div class="coreValuesInstructions">
-                Click on words below to populate your 6 Core Values, you can deselect them by clicking on them again if you decide your values have changed
+                Click on words below to populate your 6 Core Values, you can deselect them by clicking on them again if
+                you decide your values have changed
+           
             </div>
+           
             <div class="wordbank" class="column-wrapper">
+               
                 <div class="word">Accountability</div>
                 <div class="word">Adventure</div>
                 <div class="word">Altruism</div>
@@ -180,13 +263,16 @@
                 <div class="word">Truth</div>
                 <div class="word">Understanding</div>
                 <div class="word">Wealth</div>
+            
             </div>
 
             <div class="cvlink">
+                
                 <a href="https://brenebrown.com/resources/dare-to-lead-list-of-values/" target="_blank"
                     title="Open Brene Brown Link" class="cvlink">Complete Values List
                     found at BreneBrown.com</a>
-            </div>
+            
+                </div>
 
             <h2 id="h2cv">Your Top Six Core Values:</h2>
 
@@ -197,14 +283,23 @@
             </div>
         </div>
     </div>
+
     <div id="monthlyCalendarDiv" class="hidden-div calendar">
+        
         <div class="header">
+           
             <button id="prevMonth">&lt;</button>
+           
             <h2 id="monthYear"></h2>
+           
             <button id="nextMonth">&gt;</button>
+        
         </div>
+       
         <div class="days">
+       
         </div>
+   
     </div>
 
     <script src="project1.js" defer></script>
