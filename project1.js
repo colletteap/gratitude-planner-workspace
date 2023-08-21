@@ -105,7 +105,7 @@ function showDivById(divId) {
 }
 
 const monthlyCalendarDiv = document.querySelector('#calendar');
-monthlyCalendarDiv.addEventListener('click', () => { showDivById ('monthlyCalendarDiv') });
+monthlyCalendarDiv.addEventListener('click', () => { showDivById('monthlyCalendarDiv') });
 
 const para2 = document.querySelector('#journal');
 para2.addEventListener('click', () => { showDivById('myJournal') });
@@ -196,7 +196,7 @@ function updateCalendar() {
     toDoInput.classList.add("calendarToDoInput");
     toDoInput.placeholder = "Enter to-do items...";
     toDoInput.value = localStorage.getItem(`toDo-${currentYear}-${currentMonth}-${day}`) || '';
-    toDoInput.addEventListener("input", function() {
+    toDoInput.addEventListener("input", function () {
       localStorage.setItem(`toDo-${currentYear}-${currentMonth}-${day}`, toDoInput.value);
     });
 
@@ -207,19 +207,19 @@ function updateCalendar() {
     specialEventsInput.classList.add("calendarSpecialEventsInput");
     specialEventsInput.placeholder = "Enter special events...";
     specialEventsInput.value = localStorage.getItem(`specialEvents-${currentYear}-${currentMonth}-${day}`) || '';
-    specialEventsInput.addEventListener("input", function() {
+    specialEventsInput.addEventListener("input", function () {
       localStorage.setItem(`specialEvents-${currentYear}-${currentMonth}-${day}`, specialEventsInput.value);
     })
 
-    const notesContainer = document.createElement ("div");
-    notesContainer.classList.add ("calendarNotesContainer");
+    const notesContainer = document.createElement("div");
+    notesContainer.classList.add("calendarNotesContainer");
 
-    const notesInput = document.createElement ("textarea");
-    notesInput.classList.add ("calendarNotesInput");
+    const notesInput = document.createElement("textarea");
+    notesInput.classList.add("calendarNotesInput");
     notesInput.placeholder = "Enter notes...";
-    notesInput.value = localStorage.getItem (`notes-${currentYear}-${currentMonth}-${day}`) || '';
-    notesInput.addEventListener("input", function() {
-        localStorage.setItem(`notes-${currentYear}-${currentMonth}-${day}`, notesInput.value);
+    notesInput.value = localStorage.getItem(`notes-${currentYear}-${currentMonth}-${day}`) || '';
+    notesInput.addEventListener("input", function () {
+      localStorage.setItem(`notes-${currentYear}-${currentMonth}-${day}`, notesInput.value);
     })
 
     toDoContainer.appendChild(toDoInput);
@@ -264,19 +264,19 @@ const recentTodoTexts = JSON.parse(localStorage.getItem("recentTodoTexts")) || [
 topToDoDiv.textContent = recentTodoTexts.join("\n");
 
 todoTextareas.forEach((calendarToDoInput, _index) => {
-    calendarToDoInput.addEventListener("blur", function () {
-        const todoText = calendarToDoInput.value;
+  calendarToDoInput.addEventListener("blur", function () {
+    const todoText = calendarToDoInput.value;
 
-        recentTodoTexts.unshift(todoText);
+    recentTodoTexts.unshift(todoText);
 
-        if (recentTodoTexts.length > 6) {
-            recentTodoTexts.pop(); 
-        }
+    if (recentTodoTexts.length > 6) {
+      recentTodoTexts.pop();
+    }
 
-        topToDoDiv.textContent = recentTodoTexts.join("\n");
+    topToDoDiv.textContent = recentTodoTexts.join("\n");
 
-        localStorage.setItem("recentTodoTexts", JSON.stringify(recentTodoTexts));
-    });
+    localStorage.setItem("recentTodoTexts", JSON.stringify(recentTodoTexts));
+  });
 });
 
 // Local Storage, Updating and Blur event listener for Special Days
@@ -289,17 +289,17 @@ const recentSpecialDaysTexts = JSON.parse(localStorage.getItem("recentSpecialDay
 topSpecialDaysDiv.textContent = recentSpecialDaysTexts.join("\n");
 
 specialDaysTextareas.forEach((calendarSpecialEventsInput, _index) => {
-    calendarSpecialEventsInput.addEventListener("blur", function () {
-      const specialDaysText = calendarSpecialEventsInput.value;
+  calendarSpecialEventsInput.addEventListener("blur", function () {
+    const specialDaysText = calendarSpecialEventsInput.value;
 
-      recentSpecialDaysTexts.unshift(specialDaysText);
+    recentSpecialDaysTexts.unshift(specialDaysText);
 
-      if (recentSpecialDaysTexts. length > 6) {
-        recentSpecialDaysTexts.pop();
-      }
+    if (recentSpecialDaysTexts.length > 6) {
+      recentSpecialDaysTexts.pop();
+    }
 
-      topSpecialDaysDiv.textContent = recentSpecialDaysTexts.join("\n");
+    topSpecialDaysDiv.textContent = recentSpecialDaysTexts.join("\n");
 
-      localStorage.setItem("recentSpecialDaysTexts", JSON.stringify(recentSpecialDaysTexts));
-    });
+    localStorage.setItem("recentSpecialDaysTexts", JSON.stringify(recentSpecialDaysTexts));
+  });
 });
