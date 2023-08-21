@@ -254,18 +254,52 @@ nextMonthButton.addEventListener("click", () => {
 });
 
 
-// Show Monthly Calendar when clicked upon
+// Local Storage, Updating and Blur event listener for To Do's
 
+const topToDoDiv = document.getElementById("toDoUpdate");
+const todoTextareas = document.querySelectorAll(".calendarToDoInput");
 
-// Local Storage for input on each day with class=day
+const recentTodoTexts = JSON.parse(localStorage.getItem("recentTodoTexts")) || [];
 
-//Automatically update the div up top with sections of To-Do and Special Events
+topToDoDiv.textContent = recentTodoTexts.join("\n");
 
-function updateOutput() {
-  const calendarToDoInput = document.querySelector("calendarToDoInput");
-  const toDoSnippet = document.getElementById("toDoUpdate");
-  
-  toDoSnippet.textContent = calendarToDoInput.value;
-};
+todoTextareas.forEach((calendarToDoInput, _index) => {
+    calendarToDoInput.addEventListener("blur", function () {
+        const todoText = calendarToDoInput.value;
 
-// need to make unique ids for calendar textareas ??
+        recentTodoTexts.unshift(todoText);
+
+        if (recentTodoTexts.length > 6) {
+            recentTodoTexts.pop(); 
+        }
+
+        topToDoDiv.textContent = recentTodoTexts.join("\n");
+
+        localStorage.setItem("recentTodoTexts", JSON.stringify(recentTodoTexts));
+    });
+});
+
+// Local Storage, Updating and Blur event listener for Special Days
+
+const topSpecialDaysDiv = document.getElementById("specialDaysUpdate");
+const specialDaysTextareas = document.querySelectorAll(".calendarSpecialEventsInput");
+
+const recentSpecialDaysTexts = JSON.parse(localStorage.getItem("recentSpecialDaysTexts")) || [];
+
+topSpecialDaysDiv.textContent = recentSpecialDaysTexts.join("\n");
+
+specialDaysTextareas.forEach((calendarSpecialEventsInput, _index) => {
+    calendarSpecialEventsInput.addEventListener("blur", function () {
+      const specialDaysText = calendarSpecialEventsInput.value;
+
+      recentSpecialDaysTexts.unshift(specialDaysText);
+
+      if (recentSpecialDaysTexts. length > 6) {
+        recentSpecialDaysTexts.pop();
+      }
+
+      topSpecialDaysDiv.textContent = recentSpecialDaysTexts.join("\n");
+
+      localStorage.setItem("recentSpecialDaysTexts", JSON.stringify(recentSpecialDaysTexts));
+    });
+});

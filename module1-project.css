@@ -422,26 +422,20 @@ textarea {
   height: 225px;
 }
 
-#specialDaysUpdate {
-  flex-grow: 2;
-  height: 150px;
-  width: 60px;
-  color: black;
-  font-size: 12px;
-}
-
 .specialdayshome {
   flex-flow: column wrap;
   height: 225px;
 }
 
-#toDoUpdate {
+#toDoUpdate, #specialDaysUpdate {
   flex-grow: 2;
   height: 150px;
-  width: 60px;
+  width: 155px;
   color: black;
-  font-size: 12px;
+  font-size: 14px;
+  word-wrap: break-word;
   text-overflow: ellipsis;
+  white-space: pre-wrap;
 }
 
 
