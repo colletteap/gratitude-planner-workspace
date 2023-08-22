@@ -91,7 +91,7 @@ document.getElementById("calendar").addEventListener("click", () => {
   document.getElementById("myJournal").hidden = true;
 });
 
-document.getElementById("core-values").addEventListener("click", () => {
+document.getElementById("coreValuesCard").addEventListener("click", () => {
   document.getElementById("monthlyCalendarDiv").hidden = true;
   document.getElementById("mycorevalues").hidden = false;
   document.getElementById("myJournal").hidden = true;
@@ -129,7 +129,7 @@ function saveData() {
 
 // Show Core Values Div
 
-const para3 = document.querySelector('#core-values');
+const para3 = document.querySelector('#coreValuesCard');
 para3.addEventListener('click', () => { showDivById('mycorevalues') });
 
 // List
