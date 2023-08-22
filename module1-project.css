@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Zeyada';
+  src: url(font/Zeyada.zip/Zeyada-Regular.ttf) format('tff');
+}
+
 body {
   font-family: lora, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
   padding-top: 2rem;
@@ -7,10 +12,11 @@ body {
 p {
   text-transform: capitalize;
   color: white;
+  font-family: 'Zeyada';
 }
 
 textarea {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Zeyada', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 button {
