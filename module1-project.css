@@ -1,6 +1,19 @@
 @font-face {
   font-family: 'Zeyada';
-  src: url(font/Zeyada.zip/Zeyada-Regular.ttf) format('tff');
+  src: url(font/Zeyada-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'AlegreyaLight';
+  src: url(font/AlegreyaSansSC-Light.ttf) format('truetype');
+}
+
+.zeyada {
+  font-family: 'Zeyada', sans serif;
+}
+
+.alegreyaLight {
+  font-family: 'AlegreyaLight', sans serif;
 }
 
 body {
@@ -12,11 +25,11 @@ body {
 p {
   text-transform: capitalize;
   color: white;
-  font-family: 'Zeyada';
+  font-family: 'AlegreyaLight', sans serif;
 }
 
 textarea {
-  font-family: 'Zeyada', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'SpaceBold', sans serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 button {
@@ -134,13 +147,13 @@ li {
 }
 
 .myGreatDay {
-  background-color: #fab69d;
+  background-color: #d18577;
   height: 110px;
 }
 
 
 .specialDays {
-  background-color: #9f5f67;
+  background-color: #82BDC3;
   height: 225px;
 }
 
@@ -180,12 +193,18 @@ li {
   margin-bottom: 40px;
 }
 
-#button {
+#summerCountdown {
   background: #82BDC3;
   color: #000000;
   padding-left: 10px;
   padding-bottom: 5px;
   height: 80px;
+}
+
+.summerCountdownStyle {
+  font-family: 'Zeyada', sans serif;
+  color: white;
+  font-size: 22px;
 }
 
 #calendar {
@@ -194,7 +213,7 @@ li {
 }
 
 .toDoCard {
-  background-color: #ebccbd;
+  background-color: #e1b469;
   height: 225px;
 }
 
@@ -209,7 +228,7 @@ li {
 }
 
 #substituteCard {
-  background-color: #fab69d;
+  background-color: #d18577;
   height: 153px;
 }
 

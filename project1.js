@@ -15,7 +15,7 @@ const phraseElement = document.getElementById('randomPhrase');
 phraseElement.textContent = randomPhrase;
 
 // Summer Countdown
-const button = document.querySelector('button');
+const button = document.getElementById('summerCountdown');
 
 button.addEventListener('click', summerCountdown);
 
@@ -36,15 +36,16 @@ function summerCountdown() {
     let seconds = Math.floor(timeDifference % 60);
 
     // Display countdown
-    const countdownElement = document.getElementById('button');
+    const countdownElement = document.getElementById('summerCountdown');
     countdownElement.textContent = `Summer starts in: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
 
     // Update countdown every second
     setTimeout(summerCountdown, 1000);
   } else {
     // If event has already occurred
-    const countdownElement = document.getElementById('button');
+    const countdownElement = document.getElementById('summerCountdown');
     countdownElement.textContent = 'Enjoy summer break!';
+    countdownElement.classList.add('summerCountdownStyle');
   }
 }
 
