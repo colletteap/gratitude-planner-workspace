@@ -58,6 +58,13 @@ function updateName() {
   para.textContent = `${name} Teacher Planner`;
 }
 
+// Clickable Sub Plan Div
+
+document.getElementById("substituteCard").addEventListener("click", function() {
+window.location.href = "https://colletteap.github.io/substitutePlanner/";
+});
+
+
 //Give Prompt Options
 function selectJournalPrompt() {
   var prompts = [
